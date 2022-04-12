@@ -1,0 +1,43 @@
+.star-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    align-items: center;
+    padding: 1em 1em 1em 0;
+}
+
+.star {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--amarelo-contraste);
+}
+
+.star::before {
+    content: "\2605";
+}
+
+.star.ativo ~ .star::before {
+    content: "\2606";
+}
+
+.star-list:hover .star::before {
+    content: "\2605";
+}
+
+
+.star:hover  ~ .star::before {
+    content: "\2606";
+}
+
+/* MEDIA */
+
+@media screen and (max-width: 1024px) {
+
+    .carousel-div-avaliacao {
+        display: flex;
+        justify-content: flex-start;
+        gap: 2rem;
+        align-items: center;
+    }
+}

@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/* CORPO */
+
+body {
+    font: 400 1rem/1.2em 'Poppins', sans-serif;
+    color: var(--cinza-claro);
+}
+
+
+/* LINKS */
+
+a {
+    color: var(--vermelho-medio);
+    text-decoration: none;
+    transition: 400ms;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+a:hover {
+    color: var(--vermelho-vivo);
+    text-decoration: underline;
+}
+
+/* TITULOS */
+
+h1 {
+    font: 600 2.5rem/1em 'Crimson Pro', serif;
+}
+
+h2 {
+    font: 600 1.5rem/1em 'Poppins', serif;
+}
+
+
+/* FOOTER */
+
+footer {
+    font: 300 0.875rem/1.2em 'Poppins', sans-serif;
+}
+
+/* MEDIA */
+
+@media screen and (max-width: 1024px) {
+    h2 {
+        font: 600 1.4rem/1em 'Poppins', serif;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        font-size: 0.875rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+}

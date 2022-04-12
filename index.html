@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta name="robots" content="noindex"> <!--Essa meta tag realmente está presente para que este trabalho não possa ser indexado pelos mecanismos do google, visto que ele apenas será apresentado à disciplina de Desenvolvimento de Interfaces Web como um documento comprobatório do meu aprendizado.-->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="FernandoCsm">
+        <meta name="description" content="Bem Vindo à sinematic seu portal de filmes favorito!">
+        <meta name="keywords" content="Scinematic, portal de filmes, filmes, séries, lançamentos">
+        <meta name="copyright" content="&#169 FernandoCsm / JealousKing">
+        <title></title>
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/home/main.css">
+        <link rel="shortcut icon" href="assets/img/logos/favicon.png" type="image/x-icon">
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+        <script src="assets/javascript/index.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <section class="container header-section">
+                <div class="header-div-logo">
+                    <a href="index.html"><img src="assets/img/logos/logo_size_invert.jpg" alt="Logo do Sinematic"></a>
+                </div>
+                <div id="primary-navigation" class="header-div-primary-nav" data-visible="false">
+                    <nav class="primary-nav">
+                        <ul class="primary-nav-list">
+                            <li><a href="#titulo-lancamentos">lançamentos</a></li>
+                            <li></li>
+                            <li><a href="#titulo-destaques">em destaque</a></li>
+                            <li></li>
+                            <li><a href="#">avaliações</a></li>
+                            <li></li>
+                            <li><a href="#">entrevistas & makingof</a></li>
+                            <li></li>
+                            <li><a href="#">novidades</a></li>
+                        </ul>
+                    </nav>
+
+                    <form class="header-form-search">
+                        <label for="search-bar">O que você quer buscar?</label>
+                        <button class="search-btn-icon" type="submit"><i class='bx bx-search'></i><span class="sr-only">Buscar</span></button>
+                        <input id="search-bar" type="search" placeholder="Pesquisar filme...">
+                    </form>
+                </div>
+                <button type="button" class="menu-toggle" aria-controls="primary-navigation" aria-expanded="false"><i class='menu-icon bx bx-menu'></i><span class="sr-only">Menu</span></button>
+            </section>
+        </header>
+
+
+
+        <main>
+            <section class="main-primary-section">
+
+                <section class="container lancamento-title-section">
+                    <div>
+                        <h1 id="titulo-lancamentos">Lançamentos</h1>
+                    </div>
+                </section>
+
+                <section class="container carousel-section">
+                    <button class="carousel-button carousel-button-left sr-only">
+                        <i class='bx bx-chevron-left' ></i>
+                    </button>
+
+                    <div class="carousel-content-container">
+                        <ul class="carousel-list">
+                            <li class="carousel-slide current-li">
+                                <article class="carousel-article">
+                                    <div class="carousel-img">
+                                        <div class="iframe-destaque">
+                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/zC8Vc8rMOdk?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+
+                                    <div class="carousel-content">
+                                        <h2 class="carousel-title"><a href="https://www.cinemark.com.br/filme/jurassic-world-dominio" rel="external" target="_blank">Jurassic World Domínio</a></h2>
+                                        <p class="sinopse"><strong><em>Sinópse:</em></strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus maiores, fugiat vel corporis quas nam autem culpa vitae totam necessitatibus sit quasi. Totam placeat laudantium sed nulla dolore qui animi alias delectus consectetur soluta nisi, omnis quas sequi architecto id mollitia pariatur! </p>
+                                        <ul class="carousel-destaque-info">
+                                            <li><strong>Diretor:</strong></li>
+                                            <li><strong>Roteiro:</strong></li>
+                                            <li><strong>Estreia: </strong>2022</li>
+                                        </ul>
+                                        <div class="carousel-destaque-elenco">
+                                            <p class="elenco"><strong>Elenco:</strong></p>
+                                            <ul class="elenco-atores">
+                                                <li>Ator1</li>
+                                                <li>|</li>
+                                                <li>Ator2</li>
+                                                <li>|</li>
+                                                <li>Ator3</li>
+                                            </ul>
+                                        </div>
+                                        <div class="carousel-div-avaliacao">
+                                            <p><strong>Avaliação:</strong></p>
+                                            <ul class="star-list">
+                                                <li class="star ativo"></li>
+                                                <li class="star"></li>
+                                                <li class="star"></li>
+                                                <li class="star"></li>
+                                                <li class="star"></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </article>
+                            </li>
+
+                            <li class="carousel-slide">
+                                <article class="carousel-article">
+                                    <div class="carousel-img">
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/5SjYFF2g35c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
+
+                                    <div class="carousel-content">
+                                        <h2 class="carousel-title"><a href="https://www.cinemark.com.br/filme/animais-fantasticos-os-segredos-de-dumbledore" rel="external" target="_blank">Animais Fantásticos: Os Segredos de Dumbledore</a></h2>
+                                        <p class="sinopse"><strong><em>Sinópse:</em></strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus maiores, fugiat vel corporis quas nam autem culpa vitae totam necessitatibus sit quasi. Totam placeat laudantium sed nulla dolore qui animi alias delectus consectetur soluta nisi, omnis quas sequi architecto id mollitia pariatur! </p>
+                                        <ul class="carousel-destaque-info">
+                                            <li><strong>Diretor:</strong></li>
+                                            <li><strong>Roteiro:</strong></li>
+                                            <li><strong>Estreia: </strong>2022</li>
+                                        </ul>
+                                        <div class="carousel-destaque-elenco">
+                                            <p class="elenco"><strong>Elenco:</strong></p>
+                                            <ul class="elenco-atores">
+                                                <li>Ator1</li>
+                                                <li>|</li>
+                                                <li>Ator2</li>
+                                                <li>|</li>
+                                                <li>Ator3</li>
+                                            </ul>
+                                        </div>
+                                        <div class="carousel-div-avaliacao">
+                                            <p><strong>Avaliação:</strong></p>
+                                            <ul class="star-list">
+                                                <li class="star ativo"></li>
+                                                <li class="star"></li>
+                                                <li class="star"></li>
+                                                <li class="star"></li>
+                                                <li class="star"></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </article>
+                            </li>
+
+                            <li class="carousel-slide">
+                                <article class="carousel-article">
+                                    <div class="carousel-img">
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/mOuTbZhHCnY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
+
+                                    <div class="carousel-content">
+                                        <h2 class="carousel-title"><a href="https://www.cinemark.com.br/filme/doutor-estranho-no-multiverso-da-loucura" rel="external" target="_blank">Doutor Estranho no Multiverso da Loucura</a></h2>
+                                        <p class="sinopse"><strong><em>Sinópse:</em></strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus maiores, fugiat vel corporis quas nam autem culpa vitae totam necessitatibus sit quasi. Totam placeat laudantium sed nulla dolore qui animi alias delectus consectetur soluta nisi, omnis quas sequi architecto id mollitia pariatur! </p>
+                                        <ul class="carousel-destaque-info">
+                                            <li><strong>Diretor:</strong></li>
+                                            <li><strong>Roteiro:</strong></li>
+                                            <li><strong>Estreia: </strong>2022</li>
+                                        </ul>
+                                        <div class="carousel-destaque-elenco">
+                                            <p class="elenco"><strong>Elenco:</strong></p>
+                                            <ul class="elenco-atores">
+                                                <li>Ator1</li>
+                                                <li>|</li>
+                                                <li>Ator2</li>
+                                                <li>|</li>
+                                                <li>Ator3</li>
+                                            </ul>
+                                        </div>
+                                        <div class="carousel-div-avaliacao">
+                                            <p><strong>Avaliação:</strong></p>
+                                            <ul class="star-list">
+                                                <li class="star ativo"></li>
+                                                <li class="star"></li>
+                                                <li class="star"></li>
+                                                <li class="star"></li>
+                                                <li class="star"></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </article>
+                            </li>
+
+                            <li class="carousel-slide">
+                                <article class="carousel-article">
+                                    <div class="carousel-img">
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/59iAzYuo2Qk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
+
+                                    <div class="carousel-content">
+                                        <h2 class="carousel-title"><a href="https://www.cinemark.com.br/filme/o-homem-do-norte" rel="external" target="_blank">O Homem do Norte</a></h2>
+                                        <p class="sinopse"><strong><em>Sinópse:</em></strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus maiores, fugiat vel corporis quas nam autem culpa vitae totam necessitatibus sit quasi. Totam placeat laudantium sed nulla dolore qui animi alias delectus consectetur soluta nisi, omnis quas sequi architecto id mollitia pariatur! </p>
+                                        <ul class="carousel-destaque-info">
+                                            <li><strong>Diretor:</strong></li>
+                                            <li><strong>Roteiro:</strong></li>
+                                            <li><strong>Estreia: </strong>2022</li>
+                                        </ul>
+                                        <div class="carousel-destaque-elenco">
+                                            <p class="elenco"><strong>Elenco:</strong></p>
+                                            <ul class="elenco-atores">
+                                                <li>Ator1</li>
+                                                <li>|</li>
+                                                <li>Ator2</li>
+                                                <li>|</li>
+                                                <li>Ator3</li>
+                                            </ul>
+                                        </div>
+                                        <div class="carousel-div-avaliacao">
+                                            <p><strong>Avaliação:</strong></p>
+                                            <ul class="star-list">
+                                                <li class="star ativo"></li>
+                                                <li class="star"></li>
+                                                <li class="star"></li>
+                                                <li class="star"></li>
+                                                <li class="star"></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </article>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button class="carousel-button carousel-button-right">
+                        <i class='bx bx-chevron-right' ></i>
+                    </button>
+
+                    <div class="carousel-nav">
+                        <button class="carousel-indicator current-slide"></button>
+                        <button class="carousel-indicator"></button>
+                        <button class="carousel-indicator"></button>
+                        <button class="carousel-indicator"></button>
+                    </div>
+                </section>
+
+            </section>
+
+            <section class="container main-secundary-section">
+                <section class="section-em-destaque">
+                    <div class="header-destaques">
+                        <h1 id="titulo-destaques">Em Destaque</h1>
+                        <form>
+                            <label for="categorias-destaque"><span class="sr-only">Selecione uma categoria:</span></label>
+                            <select name="categorias" id="categorias-destaque">
+                                <option value="aventura">Aventura</option>
+                                <option value="romance">Romance</option>
+                                <option value="comedia">Comédia</option>
+                            </select>
+                        </form>
+                    </div>
+                </section>
+
+                
+            </section>
+        </main>
+        <footer>
+            <section class="container footer-section">
+                <div class="footer-div-content">
+                    <p>&#169 Copyright 2022 | <a href="https://www.linkedin.com/in/fernandocsdm/" rel="external" target="_blank"><strong>FernandoCsm</strong></a> / <span class="jealousking-link"><a href="https://jealousking.com.br/" rel="external" target="_blank">JealousKing</a></span></p>
+                </div>
+                <div class="footer-div-logo">
+                    <img src="assets/img/logos/logo_size_invert.jpg" alt="Logo do Sinematic">
+                </div>
+            </section>
+        </footer>
+        <script src="assets/javascript/carousel.js"></script>
+        <script src="assets/javascript/avaliacao.js"></script>
+    </body>
+</html>

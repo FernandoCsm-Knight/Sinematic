@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+@import url(header.css);
+@import url(footer.css);
+@import url(fonts.css);
+
+:root {
+    --vermelho-principal: #F40800;
+    --vermelho-principal-shadow: hsla(2, 100%, 48%, 0.25);
+    --vermelho-principal-shadow-text: hsla(2, 100%, 48%, 0.6);
+    --amarelo-contraste: #EDF518;
+    --azul-claro: #1893F5;
+    --azul-escuro: #0861A8;
+    --vermelho-escuro: #360200;
+    --vermelho-medio: #750400;
+    --vermelho-vivo: #DB0700;
+    --cinza-claro: #888;
+    --borda-header-search: #360200;
+    --fundo-espelhado: rgba(54, 2, 0, 0.5);
+}
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #141414;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1400px;
+    padding: 20px 25px;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+}
+
+.sr-only {
+    display: none;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

@@ -1,0 +1,79 @@
+@import url(carousel.css);
+@import url(avaliacao.css);
+
+/* SEÇÃO PRINCIPAL */
+
+.main-primary-section {
+    background-color: #090707;
+}
+
+/* TITULOS */
+
+.lancamento-title-section {
+    text-align: center;
+    padding: 30px 0;
+    color: var(--vermelho-principal);
+    text-shadow: 0px 0px 12px var(--vermelho-principal-shadow-text); 
+}
+
+.lancamento-title-section:hover {
+    animation: neon 4s cubic-bezier(.09,.57,.97,.41) infinite;
+}
+
+/* POSTERS */
+
+
+
+
+/* ANIMACAO */
+
+@keyframes neon {
+	
+	0% {
+		opacity: 1;
+	}
+	
+	30% {
+		opacity: 0.8;
+	}
+	
+	35% {
+		opacity: 0;
+	}
+	
+	38% {
+		opacity: 0.8;
+	}
+	
+	42% {
+		opacity: 0;
+	}
+	
+	45% {
+		opacity: 0.8;
+	}
+	
+	48% {
+		opacity: 0;
+	}
+	
+	51% {
+		opacity: 0.8;
+	}
+	
+	59% {
+		opacity: 0;
+	}
+	
+	67% {
+		opacity: 0.8;
+	}
+	
+	75% {
+		opacity: 0;
+	}
+	
+	100% {
+		opacity: 0.8;
+	}
+}
