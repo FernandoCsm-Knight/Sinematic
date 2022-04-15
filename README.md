@@ -16,7 +16,7 @@ A documentação asseguir foi criada para demonstrar que o site atende a todos o
 
 Veja abaixo a rúbrica disponibilizada pelos orientadores do trabalho para confirmar minhas diretivas: 
 
-![Rubrica](assets/img/rubrica.jpg)
+![Rubrica](assets/img/rubrica.png)
 
 _**Caso queira conferir se Sinematic está de acordo com o Wireframe, este pode ser encontrado na pasta img do diretório assets, com o nome de layout.jpg.**_
 
