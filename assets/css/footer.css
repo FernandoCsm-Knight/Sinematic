@@ -7,6 +7,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 2rem;
 }
 
 .footer-div-logo img {
@@ -20,4 +21,41 @@ footer {
 
 .jealousking-link a:hover {
     color: #00c946;
+}
+
+.footer-div-content {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.security-policy-link {
+    color: #555;
+    transition: 400ms;
+}
+
+.security-policy-link:hover {
+    color: var(--cinza-claro);
+    text-decoration: underline;
+}
+
+.link-meu-nome {
+    color: var(--vermelho-medio);
+    transition: 400ms;
+}
+
+.link-meu-nome:hover {
+    color: var(--vermelho-vivo);
+}
+
+@media screen and (max-width: 900px) {
+    .footer-section {
+        flex-direction: column;
+    }
+
+    .footer-div-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
 }

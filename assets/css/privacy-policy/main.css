@@ -1,0 +1,50 @@
+body {
+    background-color: white;
+    color: black;
+}
+
+footer {
+    color: var(--cinza-claro);
+}
+
+h1, h2, h3,span, strong {
+    color: black;
+}
+
+.main-title-privacy-policy h1 {
+    font-weight: 800;
+    text-align: center;
+}
+
+.main-content-privacy-policy {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 25px 20px;
+}
+
+.main-content-privacy-policy p {
+    line-height: 1.7em;
+    font-weight: 500;
+    padding: 10px 0;   
+}
+
+.main-content-privacy-policy h2 {
+    padding: 25px 0;
+    font-weight: 700;
+}
+
+.main-content-privacy-policy h3 {
+    padding: 15px 0;
+} 
+
+.main-content-privacy-policy ul {
+    list-style-position: inside;
+}
+
+.main-content-privacy-policy ul li {
+    padding: 10px 0;
+}
+
+.email-security-policy {
+    color: var(--vermelho-vivo);
+}

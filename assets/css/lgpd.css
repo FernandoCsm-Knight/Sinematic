@@ -1,0 +1,32 @@
+.lgpd-cookies {
+    font-size: 0.875rem;
+    background-color: #030101;
+    position: sticky;
+    bottom: 0;
+    padding: 20px 25px;
+}
+
+.lgpd-cookies div {
+    color: #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.cookie_ok {
+    color: white;
+    letter-spacing: 1px;
+    background-color: rgb(8, 88, 25);
+    padding: 10px;
+    border-radius: 5px;
+    transition: 200ms;
+}
+
+.cookie_ok:hover {
+    background-color: rgb(12, 122, 36);
+}
+
+.cookie_ok:active {
+    background-color: rgb(8, 88, 25);
+}

@@ -8,11 +8,9 @@ menuToggle.addEventListener("click", () => {
         mobileMenu.setAttribute('data-visible', true);
         menuToggle.setAttribute('aria-expanded', true);
         mobileMenuIcon.setAttribute('class', 'bx bx-x');
-
     } else if(visibiliti === "true") {
         mobileMenu.setAttribute('data-visible', false);
         menuToggle.setAttribute('aria-expanded', false);
         mobileMenuIcon.setAttribute('class', 'bx bx-menu');
-
     }
 });

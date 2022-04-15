@@ -1,0 +1,125 @@
+/* TITULO */
+
+.entrevista-title {
+    margin-bottom: 3rem;
+}
+
+/* CONTAINER */
+
+.entrvista-info-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 90%;
+    gap: 1.5rem;
+    margin: 0 auto 1.5rem;
+}
+
+.entrevista-item {
+    background-color: var(--fundo-espelhado-cinza);   
+    padding: 20px;
+    border-radius: 10px;
+    color: #ccc;
+}
+
+.entrevista-item:nth-child(4) {
+    display: none;
+}
+
+.entrevista-iframe {
+    width: 100%;
+    margin-bottom: 1.2rem;
+}
+
+/* COMPONENTS */
+
+.entrevista-iframe iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.entrevista-item-title {
+    margin-bottom: 1em;
+    color: var(--vermelho-principal);
+}
+
+.entrevista-item-title-span {
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--amarelo-contraste);
+}
+
+.entrevista-item-content {
+    font-size: 0.875rem;
+    font-weight: 300;
+}
+
+.entrevista-item-content span {
+    font-weight: 500;
+}
+
+.entrevista-content-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.entrevista-item-content p {
+    padding-top: 0.2rem;
+}
+
+/* MEDIA */
+
+@media screen and (max-width: 1250px) {
+    .entrvista-info-container {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1124px) {
+    .entrevista-item:nth-child(4) {
+        display: block;
+    }
+
+    .entrvista-info-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .entrvista-info-container{
+        gap: 1rem;
+    }
+
+    .entrevista-content-flex {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .entrvista-info-container {
+        grid-template-columns: 1fr;
+    }
+
+    .entrevista-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        min-height: 25rem;
+    }
+
+    .entrevista-item:nth-child(4) {
+        display: none;
+    }
+
+    .entrevista-iframe {   
+        flex-grow: 1;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .entrevista-item {
+        min-height: 20rem;
+    }
+}

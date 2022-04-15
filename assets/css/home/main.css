@@ -1,10 +1,15 @@
 @import url(carousel.css);
 @import url(avaliacao.css);
+@import url(destaques.css);
+@import url(ultimas-avaliacoes.css);
+@import url(entrevistas-makingof.css);
+@import url(materias.css);
 
 /* SEÇÃO PRINCIPAL */
 
-.main-primary-section {
+.main-primary-section, .main-terciary-section {
     background-color: #090707;
+	box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.4);
 }
 
 /* TITULOS */
@@ -20,10 +25,56 @@
     animation: neon 4s cubic-bezier(.09,.57,.97,.41) infinite;
 }
 
-/* POSTERS */
+.titulo-section {
+    text-align: left;
+    padding: 5px 0;
+    color: var(--vermelho-principal);
+    text-shadow: 0px 0px 12px var(--vermelho-principal-shadow-text); 
+}
 
+.titulo-section:hover {
+	animation: neon 4s cubic-bezier(.09,.57,.97,.41) infinite;
+}
 
+/* BOTÃO */
 
+.flex-div-btn {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.div-button-carregar-mais {
+    position: relative;
+}
+
+.btn-carregar-mais {
+    cursor: pointer;
+    background-color: var(--azul-escuro);
+    padding: 0.7em 0.7em 0.7em 3em;
+    border-radius: 5px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.875rem;
+    transition: 200ms;
+}
+
+.btn-carregar-mais span {
+	color: #090707;
+    font-size: 2.3em;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-42%);
+}
+
+.btn-carregar-mais:hover {
+    background-color: var(--azul-claro);
+}
+
+.btn-carregar-mais:active {
+    background-color: var(--azul-escuro);
+}
 
 /* ANIMACAO */
 

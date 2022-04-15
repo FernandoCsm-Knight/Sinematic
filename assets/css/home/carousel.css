@@ -10,9 +10,8 @@
     overflow: hidden;
     position: relative;
     height: 100%;
-    height: 50vh;
+    height: 55vh;
 }
-
 .carousel-list {
     list-style-type: none;
     position: relative;
@@ -51,14 +50,20 @@
 .carousel-destaque-info {
 	list-style-type: none;
     display: flex;
+    gap: 1rem;
     justify-content: space-between;
     align-items: center;
+}
+
+.carousel-destaque-info li, .elenco-atores {
+    text-align: center;
 }
 
 .elenco-atores {
     list-style-type: none;
     display: flex;
     justify-content: flex-start;
+    flex-wrap: wrap;
     align-items: center;
     gap: 1rem;
     padding-bottom: 1em;

@@ -8,6 +8,13 @@ body {
     color: var(--cinza-claro);
 }
 
+span {
+    color: #ccc;
+}
+
+strong {
+    color: #ccc;
+}
 
 /* LINKS */
 
@@ -31,7 +38,13 @@ h1 {
 }
 
 h2 {
-    font: 600 1.5rem/1em 'Poppins', serif;
+    color: #ccc;
+    font: 600 2rem/1em 'Crimson Pro', serif;
+}
+
+h3 {
+    color: #ccc;
+    font: 600 1.2rem/1em 'Poppins', sans-serif;
 }
 
 
@@ -44,8 +57,12 @@ footer {
 /* MEDIA */
 
 @media screen and (max-width: 1024px) {
+    h1{
+        font-size: 2.3rem;
+    }
+
     h2 {
-        font: 600 1.4rem/1em 'Poppins', serif;
+        font-size: 1.8rem;
     }
 }
 
@@ -59,6 +76,16 @@ footer {
     }
 
     h2 {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    h1 {
+        font-size: 1.7rem;
     }
 }
