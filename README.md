@@ -6,6 +6,8 @@ Este é um projeto de site para um portal de filmes online, apresentado à disci
 
 A documentação asseguir foi criada para demonstrar que o site atende a todos os critérios de avaliação definidos para o trabalho.
 
+**_Observação:_** Esse site também pode ser acessado através do link: [Sinematic](https://scinematic.fernandocsm.repl.co/)
+
 ### Critérios
 
 | Parâmetros   | Pontuação reservada       | Descrição                           | Execução do Parâmetro |
@@ -16,9 +18,13 @@ A documentação asseguir foi criada para demonstrar que o site atende a todos o
 
 Veja abaixo a rúbrica disponibilizada pelos orientadores do trabalho para confirmar minhas diretivas: 
 
-![Rubrica](assets/img/rubrica.jpg)
+![Rubrica](assets/img/rubrica.png)
 
 _**Caso queira conferir se Sinematic está de acordo com o Wireframe, este pode ser encontrado na pasta img do diretório assets, com o nome de layout.jpg.**_
+
+### Nota sobre a arquitetura
+
+Observe que o site está organizado em alguns diretórios e subdiretórios. A pasta `assets` contém toda a estrutura do site exceto o HTML da página principal. Dentro de `assets` as seguintes pastas podem ser encontradas: `css`, `icons`, `img`, `javascript` e `pages`. o nome das pastas é auto explicativo, ou seja, dentro de cada uma delas estão conteúdos relacionados com seus nomes. Dentro do diretório `css` estão todos os arquivos css do site organizados de acordo com o nome das estruturas às quais alteram. As demais pastas de `assets` apresentam uma organização semelhante.
 
 ### Diretivas Importantes
 
@@ -47,4 +53,4 @@ Como o trabalho não exigia e tão pouco restringia o uso da linguagem considere
 
 #### DATA DE ATUALIZAÇÃO DO PROJETO: 
 
-> 16/04/2022;
+> 16/04/2022

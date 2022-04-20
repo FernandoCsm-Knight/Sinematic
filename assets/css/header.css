@@ -62,7 +62,7 @@ header {
 
 /* MOBILE NAV */
 
-.menu-toggle {
+.menu-toggle1, .menu-toggle2 {
     display: none;
     font-size: 3rem;
     color: var(--vermelho-principal);
@@ -161,7 +161,7 @@ header {
 }
 
 @media screen  and (max-width: 1024px) {
-    .header-section {
+    .header-section, .primary-navigation {
         position: relative;
     }
 
@@ -212,12 +212,22 @@ header {
         gap: 1rem;
     }
 
-    .menu-toggle {
+    .menu-toggle1 {
         display: block;
         position: absolute;
         top: 50%;
         right: 5%;
         transform: translate(0, -43%);
+        padding: 5px;
+        cursor: pointer;
+        z-index: 0;
+    }
+
+    .menu-toggle2 {
+        display: block;
+        position: absolute;
+        top: 1%;
+        right: 6.5%;
         padding: 5px;
         cursor: pointer;
         z-index: 9999;
@@ -229,6 +239,10 @@ header {
 }
 
 @media screen and (max-width: 500px) {
+    .primary-nav-list {
+        font-size: 0.875rem;
+    }
+    
     .header-form-search {
         width: 100%;
     }

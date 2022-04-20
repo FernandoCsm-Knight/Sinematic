@@ -89,6 +89,22 @@
     font-weight: 600;
 }
 
+.icon-editorial {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    position: relative;
+}
+
+.icon-editorial i {
+    transform: translateY(3px);
+    color: var(--vermelho-medio);
+    transition: 200ms;
+}
+
+.icon-editorial i:hover {
+    color: var(--vermelho-vivo);
+}
+
 /* REDES SOCIAIS */
 
 .sobre-item:nth-child(3) {
