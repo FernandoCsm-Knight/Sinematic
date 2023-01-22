@@ -1,0 +1,143 @@
+@import url(search-grid.css);
+@import url(search-results.css);
+@import url(no-results.css);
+@import url(rotation.css);
+
+/* MAIN */
+
+.search-page--main {
+    width: 100%;
+    height: 100%;
+}
+
+/* SECUNDARY SECTION -- CONTAINER */
+
+.secundary-section--results {
+    margin-inline: auto;
+    position: relative;
+}
+
+/* TITLEs */
+
+.search-title h1 {
+    font-size: 4rem;
+    text-align: center;
+    padding: 30px 0 0 0;
+    color: var(--vermelho-principal);
+    text-shadow: 0px 0px 12px var(--vermelho-principal-shadow-text); 
+}
+
+.results-title h2 {
+    text-align: left;
+    padding: 0 0 1rem 1rem;
+    font-size: 2.2rem;
+    color: var(--vermelho-principal);
+    text-shadow: 0px 0px 12px var(--vermelho-principal-shadow-text); 
+}
+
+/* SEARCH FORM -- CONTAINER */
+
+.search-form--container {
+    width: 100%;
+    height: 100%;
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* FORM */
+
+.primary-search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    position: relative;
+}
+
+/* input */
+
+.primary-search-input {
+    width: 60%;
+    border: none;
+    outline: none;
+    height: 100%;
+    border-radius: 5px 0 0 5px;
+    background-color: transparent;
+    border: 2px solid var(--vermelho-medio);
+    border-right: none;
+    padding-left: 1rem;
+    font-size: 1.1rem;
+    color: var(--cinza-claro);
+}
+
+/* button */
+
+.primary-search-btn {
+    width: 5%;
+    background-color: var(--fundo-espelhado);
+    height: 100%;
+    border-radius: 0 5px 5px 0;
+    border: 2px solid var(--vermelho-medio);
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+.primary-search-btn:hover {
+    background-color: #75040077;
+
+}
+
+/* icon */
+
+.primary-search-btn i {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: var(--vermelho-principal);
+}
+
+/* MEDIA */
+
+@media screen and (max-width: 1024px) {
+    .primary-search-input {
+        width: 80%;
+    }
+
+    .primary-search-btn {
+        width: 10%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .primary-search-input {
+        width: 85%;
+    }
+
+    .primary-search-btn {
+        width: 15%;
+    }
+
+    .search-title h1 {
+        font-size: 3rem;
+    }
+
+    .results-title h2 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .search-title h1 {
+        font-size: 2.5rem;
+    }
+
+    .primary-search-btn {
+        min-width: 50px;
+    }
+    
+    .primary-search-btn i {
+        font-size: 1.4rem;
+    }
+}

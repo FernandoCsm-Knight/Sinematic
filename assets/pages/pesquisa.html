@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+   <meta name="robots" content="noindex">
+   <!--Essa meta tag realmente está presente para que este trabalho não possa ser indexado pelos mecanismos do google, visto que ele apenas será apresentado à disciplina de Desenvolvimento de Interfaces Web como um documento comprobatório do meu aprendizado.-->
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="author" content="FernandoCsm">
+   <meta name="description" content="Bem Vindo à sinematic seu portal de filmes favorito!">
+   <meta name="keywords" content="Scinematic, portal de filmes, filmes, séries, lançamentos">
+   <meta name="copyright" content="&#169; FernandoCsm / JealousKing">
+   <title>Sinematic | Portal de Filmes</title>
+   <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+   <link rel="stylesheet" href="../css/style.css">
+   <link rel="stylesheet" href="../css/search/main.css">
+   <link rel="shortcut icon" href="../img/logos/favicon.png" type="image/x-icon">
+
+   <!-- MENU SCRIPT -->
+   <script src="../javascript/menu.js" defer></script>
+   <script src="../javascript/API_URLs.js"></script>
+</head>
+
+<body>
+   <header>
+      <section class="container header-section">
+         <div class="header-div-logo">
+            <a href="../../index.html"><img src="../img/logos/logo_size_invert.jpg" alt="Logo do Sinematic"></a>
+         </div>
+         <div id="primary-navigation" class="header-div-primary-nav" data-visible="false">
+            <nav class="primary-nav">
+               <ul class="primary-nav-list">
+                  <li><a href="../../index.html#titulo-lancamentos">lançamentos</a></li>
+                  <li></li>
+                  <li><a href="../../index.html#titulo-destaques">em destaque</a></li>
+                  <li></li>
+                  <li><a href="../../index.html#titulo-ultimas-avaliacoes">avaliações</a></li>
+                  <li></li>
+                  <li><a href="../../index.html#titulo-entrevistas-marketing">entrevistas & makingof</a></li>
+                  <li></li>
+                  <li><a href="../../index.html#titulo-novidades">novidades</a></li>
+               </ul>
+            </nav>
+
+            <form class="header-form-search">
+               <label for="search-bar">O que você quer buscar?</label>
+               <button class="search-btn-icon" type="submit"><i class='bx bx-search'></i><span
+                     class="sr-only">Buscar</span></button>
+               <input id="search-bar" type="search" placeholder="Pesquisar filme..." name="search">
+            </form>
+            <button type="button" class="menu-toggle2" aria-controls="primary-navigation" aria-expanded="false"><i
+                  class='bx bx-x'></i><span class="sr-only">Menu</span></button>
+         </div>
+         <button type="button" class="menu-toggle1" aria-controls="primary-navigation" aria-expanded="false"><i
+               class='bx bx-menu'></i><span class="sr-only">Menu</span></button>
+      </section>
+   </header>
+
+   <main class="search-page--main">
+      <section class="container primary-section--search">
+         <div class="search-title">
+            <h1>Pesquisa</h1>
+         </div>
+
+         <div class="search-form--container">
+            <form name="search" id="primarySearchForm" class="primary-search-form">
+               <label for="primarySearchInput"><span class="sr-only">Pesquisar Filmes e Series</span></label>
+               <input type="search" name="search" id="primarySearchInput" class="primary-search-input">
+               <button type="submit" name="button-search" class="primary-search-btn" id="primaryFormBtn">
+                  <span class="sr-only">Pesquisar</span>
+                  <i class='bx bx-search'></i>
+               </button>
+            </form>
+         </div>
+      </section>
+
+      <section class="secundary-section--results">
+         <div class="results-title">
+            <h2>Resultados: </h2>
+         </div>
+         <div class="results-container">
+            <div class="search-results" id="APIResults" aria-details="scroll-h">
+            
+            </div>
+            <button type="button" class="left-arrow btn-results" id="btn-result-left"><span class="sr-only">Resultados Anteriores</span><i class='bx bx-chevron-left' ></i></button>
+            <button type="button" class="right-arrow btn-results" id="btn-result-right"><span class="sr-only">Proxímos Resultados</span><i class='bx bx-chevron-right'></i></button>
+         </div>
+      </section>
+
+      <section class="rotation">
+         <div class="rotation-div--container">
+            <i class='bx bx-aperture'></i>
+            <i class='bx bx-aperture'></i>
+            <i class='bx bx-aperture'></i>
+         </div>
+      </section>
+
+      <section class="lgpd-cookies">
+         <div>
+            <p>Nosso site utiliza cookies para proporcionar aos usuários uma melhor experiência de navegação. Nosso site
+               também utiliza cookies de terceiros como aqueles do google analytics. Ao clicar no botão "Aceitar todos"
+               você consente com a nossa <a href="privacy-policy.html">Política de Privacidade</a> e com o
+               uso de todos os cookies do nosso site. Se você não concordar com todos os cookies clique em "Configurar
+               cookies" para concentir apenas com os cookies essenciais e aqueles de sua escolha.</p>
+            <button class="cookie_ok" aria-expanded="true">Aceitar</button>
+         </div>
+      </section>
+   </main>
+
+   <footer>
+      <section class="container footer-section">
+         <div class="footer-div-content">
+            <p>&#169; Copyright 2022 | <a href="https://www.linkedin.com/in/fernandocsdm/" rel="external"
+                  target="_blank"><strong class="link-meu-nome">FernandoCsm</strong></a> <span
+                  class="lateral-bar">/</span> <span class="jealousking-link"><a href="https://jealousking.com.br/"
+                     rel="external" target="_blank">JealousKing</a></span></p>
+            <p><a href="privacy-policy.html"><span class="security-policy-link">Política de
+                     Privacidade</span></a></p>
+         </div>
+         <div class="footer-div-logo">
+            <a href="../../index.html"><img src="../img/logos/logo_size_invert.jpg" alt="Logo do Sinematic"></a>
+         </div>
+      </section>
+   </footer>
+
+   <!-- SCRIPTS -->
+   <script src="../javascript/fetchFunction.js"></script>
+   <script src="../javascript/generalFunctions.js"></script>
+   <!-- lgpd -->
+   <script src="../javascript/lgpd.js"></script>
+
+   <!-- search -->
+   <script src="../javascript/searchPage/search.js"></script>
+   <script src="../javascript/searchPage/rotation.js"></script>
+
+   <!-- horizontal scroll -->
+   <script src="../javascript/mouseWheel.js"></script>
+   
+</body>
+
+</html>

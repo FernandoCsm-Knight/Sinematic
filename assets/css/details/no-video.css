@@ -1,0 +1,42 @@
+/* CONTAINER */
+.no-video {
+    margin: 2rem auto;
+    width: fit-content;
+    padding: 1rem;
+}
+
+/* ICONS */
+
+.no-video-icons {
+    color: var(--vermelho-principal);
+    text-shadow: 0px 0px 5px var(--vermelho-principal-shadow-text);
+    font-size: 4.5rem;
+    text-align: center;
+}
+
+/* Oops TEXT */
+
+.no-video-text {
+    text-align: center;
+}
+
+.no-video-text h3 {
+    font-size: 1.8rem;
+    line-height: 1.7em;
+}
+
+.no-video-text p {
+    font-size: 1rem;
+}
+
+/* MEDIA */
+
+@media screen and (max-width: 500px) {
+    .no-video-icons {
+        font-size: 3.5rem;
+    }
+
+    .no-video-text h3 {
+        font-size: 1.5rem;
+    }
+}

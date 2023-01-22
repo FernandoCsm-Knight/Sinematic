@@ -1,590 +1,770 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta name="robots" content="noindex"> <!--Essa meta tag realmente está presente para que este trabalho não possa ser indexado pelos mecanismos do google, visto que ele apenas será apresentado à disciplina de Desenvolvimento de Interfaces Web como um documento comprobatório do meu aprendizado.-->
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="FernandoCsm">
-        <meta name="description" content="Bem Vindo à sinematic seu portal de filmes favorito!">
-        <meta name="keywords" content="Scinematic, portal de filmes, filmes, séries, lançamentos">
-        <meta name="copyright" content="&#169; FernandoCsm / JealousKing">
-        <title>Sinematic | Portal de Filmes</title>
-        <link rel="stylesheet" href="assets/css/style.css">
-        <link rel="stylesheet" href="assets/css/home/main.css">
-        <link rel="shortcut icon" href="assets/img/logos/favicon.png" type="image/x-icon">
-        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-        <script src="assets/javascript/index.js" defer></script>
-    </head>
-    <body>
-        <header>
-            <section class="container header-section">
-                <div class="header-div-logo">
-                    <a href="index.html"><img src="assets/img/logos/logo_size_invert.jpg" alt="Logo do Sinematic"></a>
-                </div>
-                <div id="primary-navigation" class="header-div-primary-nav" data-visible="false">
-                    <nav class="primary-nav">
-                        <ul class="primary-nav-list">
-                            <li><a href="#titulo-lancamentos">lançamentos</a></li>
-                            <li></li>
-                            <li><a href="#titulo-destaques">em destaque</a></li>
-                            <li></li>
-                            <li><a href="#titulo-ultimas-avaliacoes">avaliações</a></li>
-                            <li></li>
-                            <li><a href="#titulo-entrevistas-marketing">entrevistas & makingof</a></li>
-                            <li></li>
-                            <li><a href="#titulo-novidades">novidades</a></li>
-                        </ul>
-                    </nav>
 
-                    <form class="header-form-search">
-                        <label for="search-bar">O que você quer buscar?</label>
-                        <button class="search-btn-icon" type="submit"><i class='bx bx-search'></i><span class="sr-only">Buscar</span></button>
-                        <input id="search-bar" type="search" placeholder="Pesquisar filme...">
-                    </form>
-                    <button type="button" class="menu-toggle2" aria-controls="primary-navigation" aria-expanded="false"><i class='bx bx-x'></i><span class="sr-only">Menu</span></button>
-                </div>
-                <button type="button" class="menu-toggle1" aria-controls="primary-navigation" aria-expanded="false"><i class='bx bx-menu'></i><span class="sr-only">Menu</span></button>
-            </section>
-        </header>
+<head>
+   <meta name="robots" content="noindex">
+   <!--Essa meta tag realmente está presente para que este trabalho não possa ser indexado pelos mecanismos do google, visto que ele apenas será apresentado à disciplina de Desenvolvimento de Interfaces Web como um documento comprobatório do meu aprendizado.-->
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="author" content="FernandoCsm">
+   <meta name="description" content="Bem Vindo à sinematic seu portal de filmes favorito!">
+   <meta name="keywords" content="Scinematic, portal de filmes, filmes, séries, lançamentos">
+   <meta name="copyright" content="&#169; FernandoCsm / JealousKing">
+   <title>Sinematic | Portal de Filmes</title>
+   <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+   <link rel="stylesheet" href="assets/css/style.css">
+   <link rel="stylesheet" href="assets/css/home/main.css">
+   <link rel="shortcut icon" href="assets/img/logos/favicon.png" type="image/x-icon">
+   
+   <!-- MENU SCRIPT -->
+   <script src="assets/javascript/menu.js" defer></script>
+   <script src="assets/javascript/API_URLs.js"></script>
+</head>
 
-        <main>
-            <section class="main-primary-section">
-                <section class="container lancamento-title-section">
-                    <div>
-                        <h1 id="titulo-lancamentos">Lançamentos</h1>
-                    </div>
-                </section>
+<body>
+   <header>
+      <section class="container header-section">
+         <div class="header-div-logo">
+            <a href="index.html"><img src="assets/img/logos/logo_size_invert.jpg" alt="Logo do Sinematic"></a>
+         </div>
+         <div id="primary-navigation" class="header-div-primary-nav" data-visible="false">
+            <nav class="primary-nav">
+               <ul class="primary-nav-list">
+                  <li><a href="#titulo-lancamentos">lançamentos</a></li>
+                  <li></li>
+                  <li><a href="#titulo-destaques">em destaque</a></li>
+                  <li></li>
+                  <li><a href="#titulo-ultimas-avaliacoes">avaliações</a></li>
+                  <li></li>
+                  <li><a href="#titulo-entrevistas-marketing">entrevistas & makingof</a></li>
+                  <li></li>
+                  <li><a href="#titulo-novidades">novidades</a></li>
+               </ul>
+            </nav>
 
-                <section class="container carousel-section">
-                    <button class="carousel-button carousel-button-left sr-only">
-                        <i class='bx bx-chevron-left' ></i>
-                    </button>
+            <form class="header-form-search">
+               <label for="search-bar">O que você quer buscar?</label>
+               <button id="headerSearchBtn" class="search-btn-icon" type="submit"><i class='bx bx-search'></i><span
+                     class="sr-only">Buscar</span></button>
+               <input id="search-bar" type="search" placeholder="Pesquisar filme..." name="search">
+            </form>
+            <button type="button" class="menu-toggle2" aria-controls="primary-navigation" aria-expanded="false"><i
+                  class='bx bx-x'></i><span class="sr-only">Menu</span></button>
+         </div>
+         <button type="button" class="menu-toggle1" aria-controls="primary-navigation" aria-expanded="false"><i
+               class='bx bx-menu'></i><span class="sr-only">Menu</span></button>
+      </section>
+   </header>
 
-                    <div class="carousel-content-container">
-                        <ul class="carousel-list">
-                            <li class="carousel-slide current-li">
-                                <article class="carousel-article">
-                                    <div class="carousel-img">
-                                        <div class="iframe-destaque">
-                                            <iframe class="carousel-iframe" width="560" height="315" src="https://www.youtube.com/embed/zC8Vc8rMOdk?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                        </div>
-                                    </div>
+   <main>
+      <section class="main-primary-section">
+         <section class="container lancamento-title-section">
+            <div>
+               <h1 id="titulo-lancamentos">Lançamentos</h1>
+            </div>
+         </section>
+  
+         <section class="container carousel-section">
+            <button class="carousel-button carousel-button-left sr-only">
+               <i class='bx bx-chevron-left'></i>
+            </button>
 
-                                    <div class="carousel-content">
-                                        <h2 class="carousel-title"><a href="https://www.cinemark.com.br/filme/jurassic-world-dominio" rel="external" target="_blank">Jurassic World Domínio</a></h2>
-                                        <p class="sinopse"><strong><em>Sinópse:</em></strong> Quatro anos após a destruição da Ilha Nublar, os dinossauros agora vivem – e caçam – ao lado de humanos em todo o mundo. Esse equilíbrio frágil remodelará o futuro e determinará, de uma vez por todas, se os seres humanos continuarão sendo os principais predadores em um planeta que agora compartilham com as criaturas mais temíveis da história. </p>
-                                        <ul class="carousel-destaque-info">
-                                            <li><strong>Diretor:</strong> Colin Trevorrow</li>
-                                            <li><strong>Roteiro:</strong> Colin Trevorrow</li>
-                                            <li><strong>Estreia: </strong><time datetime="2022-06-02">02/06/2022</time></li>
-                                        </ul>
-                                        <div class="carousel-destaque-elenco">
-                                            <p class="elenco"><strong>Elenco:</strong></p>
-                                            <ul class="elenco-atores">
-                                                <li>Chris Pratt</li>
-                                                <li>|</li>
-                                                <li>Bryce Dallas</li>
-                                                <li>|</li>
-                                                <li>Justice Smith</li>
-                                                <li>|</li>
-                                                <li>Jake Johnson</li>
-                                            </ul>
-                                        </div>
-                                        <div class="carousel-div-avaliacao">
-                                            <p><strong>Avaliação:</strong></p>
-                                            <ul class="star-list">
-                                                <li class="star ativo"></li>
-                                                <li class="star"></li>
-                                                <li class="star"></li>
-                                                <li class="star"></li>
-                                                <li class="star"></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </article>
-                            </li>
-
-                            <li class="carousel-slide">
-                                <article class="carousel-article">
-                                    <div class="carousel-img">
-                                        <iframe class="carousel-iframe"  width="560" height="315" src="https://www.youtube.com/embed/5SjYFF2g35c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    </div>
-
-                                    <div class="carousel-content">
-                                        <h2 class="carousel-title"><a href="https://www.cinemark.com.br/filme/animais-fantasticos-os-segredos-de-dumbledore" rel="external" target="_blank">Animais Fantásticos: Os Segredos de Dumbledore</a></h2>
-                                        <p class="sinopse"><strong><em>Sinópse: </em></strong>O professor Alvo Dumbledore (Jude Law) sabe que o poderoso mago das trevas Gellert Grindelwald (Mads Mikkelsen) está se movimentando para assumir o controle do mundo mágico. Incapaz de detê-lo sozinho, ele pede ao magizoologista Newt Scamander (Eddie Redmayne) para liderar uma intrépida equipe de bruxos, bruxas e um corajoso... </p>
-                                        <ul class="carousel-destaque-info">
-                                            <li><strong>Diretor:</strong> David Yates</li>
-                                            <li><strong>Roteiro:</strong> Joanne Kathleen</li>
-                                            <li><strong>Estreia: </strong><time datetime="2022-04-14">14/04/2022</time></li>
-                                        </ul>
-                                        <div class="carousel-destaque-elenco">
-                                            <p class="elenco"><strong>Elenco:</strong></p>
-                                            <ul class="elenco-atores">
-                                                <li>Eddie Redmayne</li>
-                                                <li>|</li>
-                                                <li>Katherine Waterson</li>
-                                                <li>|</li>
-                                                <li>Ezra Miller</li>
-                                                <li>|</li>
-                                                <li>Jude Law</li>
-                                                <li>|</li>
-                                                <li>...</li>
-                                            </ul>
-                                        </div>
-                                        <div class="carousel-div-avaliacao">
-                                            <p><strong>Avaliação:</strong></p>
-                                            <ul class="star-list">
-                                                <li class="star ativo"></li>
-                                                <li class="star"></li>
-                                                <li class="star"></li>
-                                                <li class="star"></li>
-                                                <li class="star"></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </article>
-                            </li>
-
-                            <li class="carousel-slide">
-                                <article class="carousel-article">
-                                    <div class="carousel-img">
-                                        <iframe class="carousel-iframe"  width="560" height="315" src="https://www.youtube.com/embed/mOuTbZhHCnY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    </div>
-
-                                    <div class="carousel-content">
-                                        <h2 class="carousel-title"><a href="https://www.cinemark.com.br/filme/doutor-estranho-no-multiverso-da-loucura" rel="external" target="_blank">Doutor Estranho no Multiverso da Loucura</a></h2>
-                                        <p class="sinopse"><strong><em>Sinópse:</em></strong> Em Doutor Estranho no Multiverso da Loucura, após derrotar Dormammu e enfrentar Thanos nos eventos de Vingadores: Ultimato, o Mago Supremo, Stephen Strange (Benedict Cumberbatch), e seu parceiro Wong (Benedict Wong), continuam suas pesquisas sobre... </p>
-                                        <ul class="carousel-destaque-info">
-                                            <li><strong>Diretor: </strong>Scott Derrickson</li>
-                                            <li><strong>Roteiro: </strong> Michael Waldron e Scott Derrickson</li>
-                                            <li><strong>Estreia: </strong><time datetime="2022-05-05">05/05/2022</time></li>
-                                        </ul>
-                                        <div class="carousel-destaque-elenco">
-                                            <p class="elenco"><strong>Elenco:</strong></p>
-                                            <ul class="elenco-atores">
-                                                <li>Benedict Cumberbatch</li>
-                                                <li>|</li>
-                                                <li>Elizabeth Olsen</li>
-                                                <li>|</li>
-                                                <li>Benedict Wong</li>
-                                            </ul>
-                                        </div>
-                                        <div class="carousel-div-avaliacao">
-                                            <p><strong>Avaliação:</strong></p>
-                                            <ul class="star-list">
-                                                <li class="star ativo"></li>
-                                                <li class="star"></li>
-                                                <li class="star"></li>
-                                                <li class="star"></li>
-                                                <li class="star"></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </article>
-                            </li>
-
-                            <li class="carousel-slide">
-                                <article class="carousel-article">
-                                    <div class="carousel-img">
-                                        <iframe class="carousel-iframe"  width="560" height="315" src="https://www.youtube.com/embed/59iAzYuo2Qk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    </div>
-
-                                    <div class="carousel-content">
-                                        <h2 class="carousel-title"><a href="https://www.cinemark.com.br/filme/o-homem-do-norte" rel="external" target="_blank">O Homem do Norte</a></h2>
-                                        <p class="sinopse"><strong><em>Sinópse:</em></strong> Do aclamado diretor Robert Eggers (A Bruxa, O Farol) chega O HOMEM DO NORTE estrelando Alexander Skarsgard, Anya Taylor-Joy, Nicole Kidman, Ethan Hawke, Willem Dafoe, e Björk. O HOMEM DO NORTE é um épico thriller de vingança que explora como um príncipe Viking irá buscar justiça pelo assassinato do seu pai. </p>
-                                        <ul class="carousel-destaque-info">
-                                            <li><strong>Diretor:</strong> Robert Eggers</li>
-                                            <li><strong>Roteiro:</strong> Robert Eggers e Sjón</li>
-                                            <li><strong>Estreia: </strong><time datetime="2022-05-12">12/05/2022</time></li>
-                                        </ul>
-                                        <div class="carousel-destaque-elenco">
-                                            <p class="elenco"><strong>Elenco:</strong></p>
-                                            <ul class="elenco-atores">
-                                                <li>Alexander Skarsgård</li>
-                                                <li>|</li>
-                                                <li>Nicole Kidman</li>
-                                                <li>|</li>
-                                                <li>Willem Dafoe</li>
-                                                <li>|</li>
-                                                <li>Ethan Hawke</li>
-                                                <li>|</li>
-                                                <li>...</li>
-                                            </ul>
-                                        </div>
-                                        <div class="carousel-div-avaliacao">
-                                            <p><strong>Avaliação:</strong></p>
-                                            <ul class="star-list">
-                                                <li class="star ativo"></li>
-                                                <li class="star"></li>
-                                                <li class="star"></li>
-                                                <li class="star"></li>
-                                                <li class="star"></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </article>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <button class="carousel-button carousel-button-right">
-                        <i class='bx bx-chevron-right' ></i>
-                    </button>
-
-                    <div class="carousel-nav">
-                        <button class="carousel-indicator current-slide"></button>
-                        <button class="carousel-indicator"></button>
-                        <button class="carousel-indicator"></button>
-                        <button class="carousel-indicator"></button>
-                    </div>
-                </section>
-
-            </section>
-
-            <section class="container main-secundary-section">
-                <section class="section-em-destaque">
-                    <div class="titulo-div-destaques">
-                        <div>
-                            <h1 class="titulo-section" id="titulo-destaques">Em Destaque</h1>
-                        </div>
-                        <div class="form-div-select">
-                            <form class="select-form">
-                                <label for="categorias-destaque"><span class="sr-only">Selecione uma categoria:</span></label>
-                                <select name="categorias" id="categorias-destaque">
-                                    <option value="aventura" selected><strong>Categoria: TODOS</strong></option>
-                                    <option value="aventura">Aventura</option>
-                                    <option value="romance">Romance</option>
-                                    <option value="comedia">Comédia</option>
-                                </select>
-                            </form>
-                            <span class="form-select-span"></span>
-                        </div>
-                    </div>
-
-                    <div class="posters-div-div">
-                        <div class="posters-div">
-                            <div>
-                                <a href="https://www.disneyplus.com/pt-br?gclid=c0e6ff5dfc07130443929d0543d2bc14&gclsrc=3p.ds&&cid=DSS-Search-Bing-71700000075038492&s_kwcid=AL!8468!10!79233714038074!disney%20plus&msclkid=c0e6ff5dfc07130443929d0543d2bc14" target="_blank" rel="external"><img src="assets/img/posters/Filme_01.jpg" alt="O Rei do Show Bunner do Filme" class="destaques-poster-img"></a>
-                            </div>
-                            <div>
-                                <a href="https://www.netflix.com/search?q=desvent&jbv=80050008" target="_blank"><img src="assets/img/posters/Serie_01.jpg" alt="Desventuras em Série" class="destaques-poster-img"></a>
-                            </div>
-                            <div>
-                                <a href="https://www.disneyplus.com/pt-br?gclid=c0e6ff5dfc07130443929d0543d2bc14&gclsrc=3p.ds&&cid=DSS-Search-Bing-71700000075038492&s_kwcid=AL!8468!10!79233714038074!disney%20plus&msclkid=c0e6ff5dfc07130443929d0543d2bc14" target="_blank" rel="external"><img src="assets/img/posters/Filme_02.jpg" alt="Como Treinar o Seu Dragão III" class="destaques-poster-img"></a>
-                            </div>
-                            <div>
-                                <a href="https://www.netflix.com/search?q=gambito&jbv=80234304" target="_blank" rel="external"><img src="assets/img/posters/Serie_02.jpg" alt="O Gambito da Rainha" class="destaques-poster-img"></a>
-                            </div>
-                            <div>
-                                <a href="https://www.primevideo.com/?_encoding=UTF8&language=pt_BR" target="_blank" rel="external"><img src="assets/img/posters/Filme_03.jpg" alt="Um Estado de Liberdade" class="destaques-poster-img"></a>
-                            </div>
-                            <div>
-                                <a href="https://www.disneyplus.com/pt-br?gclid=c0e6ff5dfc07130443929d0543d2bc14&gclsrc=3p.ds&&cid=DSS-Search-Bing-71700000075038492&s_kwcid=AL!8468!10!79233714038074!disney%20plus&msclkid=c0e6ff5dfc07130443929d0543d2bc14" target="_blank" rel="external"><img src="assets/img/posters/Serie_03.jpg" alt="LOKI" class="destaques-poster-img"></a>
-                            </div>
-                        </div>
-                        <div class="flex-div-btn">
-                            <div class="div-button-carregar-mais"><button class="btn-carregar-mais"><span><i class='bx bx-plus'></i></span>Carregar mais</button></div>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="section-ultimas-avaliacoes">
-                    <div>
-                        <h1 class="titulo-section title-ultimas-avaliacoes" id="titulo-ultimas-avaliacoes">Ultimas Avaliações</h1>
-                    </div>
-
-                    <div class="avaliacoes-container">
-                        <div class="avaliacao-div">
-                            <div class="avaliacao-pessoa-icon pessoa_01">
-                                
-                            </div>
-                            <div>
-                                <h3>Anne Taylor</h3>
-                                <p><strong>Avaliação: </strong> Adorei o site! Scinematic é agora minha primeira opção para buscar novos filmes ou séries para assistir. Mal posso esperar para ver Jurassic Wordl Dominio.</p>
-                                <div class="avaliacao-tempo">
-                                    <div>
-                                        <ul class="star-list">
-                                            <li class="star"></li>
-                                            <li class="star"></li>
-                                            <li class="star"></li>
-                                            <li class="star"></li>
-                                            <li class="star ativo"></li>
-                                        </ul>
-                                    </div>
-                                    <div>
-                                        <p><time datetime="2022-04-13 21:43">13/04/2022</time></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="avaliacao-div">
-                            <div class="avaliacao-pessoa-icon pessoa_02">
-                                
-                            </div>
-                            <div>
-                                <h3>Eduardo Nobrega</h3>
-                                <p><strong>Avaliação: </strong>O Site é muito interessante! Acabei de descobrir novas séries e filmes para assistir nesse feriado. Vou aproveitar muito esse site pelos próxmios dias.</p>
-                                <div class="avaliacao-tempo">
-                                    <div>
-                                        <ul class="star-list">
-                                            <li class="star"></li>
-                                            <li class="star"></li>
-                                            <li class="star"></li>
-                                            <li class="star"></li>
-                                            <li class="star ativo"></li>
-                                        </ul>
-                                    </div>
-                                    <div>
-                                        <p><time datetime="2022-04-14 15:27">14/04/2022</time></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="avaliacao-div">
-                            <div class="avaliacao-pessoa-icon pessoa_03">
-                                
-                            </div>
-                            <div>
-                                <h3>Luiza Fernandes</h3>
-                                <p><strong>Avaliação: </strong> Adorei o gambito da rainha, a série já lançou há algum tempo, mas ainda não tinha visto. Como eu ví o poster da séria nos destaques do site eu assisti alguns episódios mais cedo.</p>
-                                <div class="avaliacao-tempo">
-                                    <div>
-                                        <ul class="star-list">
-                                            <li class="star"></li>
-                                            <li class="star"></li>
-                                            <li class="star"></li>
-                                            <li class="star"></li>
-                                            <li class="star ativo"></li>
-                                        </ul>
-                                    </div>
-                                    <div>
-                                        <p><time datetime="2022-04-16 00:10">16/04/2022</time></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex-div-btn">
-                        <div class="div-button-carregar-mais"><button class="btn-carregar-mais"><span><i class='bx bx-plus'></i></span>Carregar mais</button></div>
-                    </div>
-                </section>                
-            </section>
-
-            <section class="main-terciary-section">
-                <div class="container video-container">
-                    <div class="entrevista-title">
-                        <h1 class="titulo-section" id="titulo-entrevistas-marketing">Entrevistas & Marketing</h1>
-                    </div>
-                    <div class="entrvista-info-container">
-                        <div class="entrevista-item">
-                            <div class="entrevista-iframe">
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/j90f2NyTPho" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
-                            <div class="entrevista-content">
-                                <h3 class="entrevista-item-title"><span class="entrevista-item-title-span">Filme: </span><a href="https://www.adorocinema.com/filmes/filme-291677/" target="_blank" rel="nofollow">Jujutsu Kaisen 0</a></h3>
-                                <div class="entrevista-item-content">
-                                    <p><span>Diretor: </span>Seong-Hu Park</p>
-                                    <div class="entrevista-content-flex">
-                                        <p><span>Roteiro: </span>Gege Akutami e Hiroshi Seko</p>
-                                        <p><span>Estreia: </span><time datetime="2022-04-28">28/04/2022</time></p>
-                                    </div>
-                                </div>
-                            </div>
+            <div class="carousel-content-container">
+               <ul class="carousel-list">
+                  <li class="carousel-slide current-li">
+                     <article class="carousel-article">
+                        <div class="carousel-img">
+                           <div class="iframe-destaque">
+                              <!-- <iframe class="carousel-iframe" width="560" height="315"
+                                 title="YouTube video player"
+                                 frameborder="0"
+                                 allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                 allowfullscreen></iframe> -->
+                           </div>
                         </div>
 
-                        <div class="entrevista-item">
-                            <div class="entrevista-iframe">
-                                <iframe width="560" height="315" src="https://br.vid.web.acsta.net/uk/medias/nmedia/55/21/12/13/17/19566231_hd_013.mp4" title="Adoro Cimena" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
-                            <div class="entrevista-content">
-                                <h3 class="entrevista-item-title"><span class="entrevista-item-title-span">Filme: </span><a href="https://www.adorocinema.com/noticias/filmes/noticia-163105/" target="_blank" rel="nofollow">Animais Fantasticos: Os Segredos de Dubledore</a></h3>
-                                <div class="entrevista-item-content">
-                                    <p><span>Diretor: </span>Colin Trevorrow</p>
-                                    <div class="entrevista-content-flex">
-                                        <p><span>Roteiro: </span>Joanne Kathleen</p>
-                                        <p><span>Estreia: </span><time datetime="2022-04-14">14/04/2022</time></p>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="carousel-content">
+                           <h2 class="carousel-title"><a href="https://www.cinemark.com.br/filme/jurassic-world-dominio"
+                                 rel="external" target="_blank">Jurassic World Domínio</a></h2>
+                           <p class="sinopse"><strong><em>Sinópse:</em></strong> Quatro anos após a destruição da Ilha
+                              Nublar, os dinossauros agora vivem – e caçam – ao lado de humanos em todo o mundo. Esse
+                              equilíbrio frágil remodelará o futuro e determinará, de uma vez por todas, se os seres
+                              humanos continuarão sendo os principais predadores em um planeta que agora compartilham
+                              com as criaturas mais temíveis da história. </p>
+                           <ul class="carousel-destaque-info">
+                              <li><strong>Diretor:</strong> Colin Trevorrow</li>
+                              <li><strong>Roteiro:</strong> Colin Trevorrow</li>
+                              <li><strong>Estreia: </strong><time datetime="2022-06-02">02/06/2022</time></li>
+                           </ul>
+                           <div class="carousel-destaque-elenco">
+                              <p class="elenco"><strong>Elenco:</strong></p>
+                              <ul class="elenco-atores">
+                                 <li>Chris Pratt</li>
+                                 <li>|</li>
+                                 <li>Bryce Dallas</li>
+                                 <li>|</li>
+                                 <li>Justice Smith</li>
+                                 <li>|</li>
+                                 <li>Jake Johnson</li>
+                              </ul>
+                           </div>
+                           <div class="carousel-div-avaliacao">
+                              <p><strong>Avaliação:</strong></p>
+                              <ul class="star-list">
+                                 <li class="star ativo"></li>
+                                 <li class="star"></li>
+                                 <li class="star"></li>
+                                 <li class="star"></li>
+                                 <li class="star"></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </article>
+                  </li>
+
+                  <li class="carousel-slide">
+                     <article class="carousel-article">
+                        <div class="carousel-img">
+                           <!-- <iframe class="carousel-iframe" width="560" height="315"
+                              title="YouTube video player"
+                              frameborder="0"
+                              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allowfullscreen></iframe> -->
                         </div>
 
-                        <div class="entrevista-item">
-                            <div class="entrevista-iframe">
-                                <iframe width="560" height="315" src="https://br.vid.web.acsta.net/uk/medias/nmedia/55/22/02/14/18/19566488_hd_013.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
-                            <div class="entrevista-content">
-                                <h3 class="entrevista-item-title"><span class="entrevista-item-title-span">Filme: </span><a href="https://www.adorocinema.com/noticias/filmes/noticia-163133/" target="_blank" rel="nofollow">Doutor Estranho no Multiverso da Loucura</a></h3>
-                                <div class="entrevista-item-content">
-                                    <p><span>Diretor: </span>Scott Derrickson</p>
-                                    <div class="entrevista-content-flex">
-                                        <p><span>Roteiro: </span>Michael Waldron e Scott Derrickson</p>
-                                        <p><span>Estreia: </span><time datetime="2022-05-05">05/05/2022</time></p>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="carousel-content">
+                           <h2 class="carousel-title"><a
+                                 href="https://www.cinemark.com.br/filme/animais-fantasticos-os-segredos-de-dumbledore"
+                                 rel="external" target="_blank">Animais Fantásticos: Os Segredos de Dumbledore</a></h2>
+                           <p class="sinopse"><strong><em>Sinópse: </em></strong>O professor Alvo Dumbledore (Jude Law)
+                              sabe que o poderoso mago das trevas Gellert Grindelwald (Mads Mikkelsen) está se
+                              movimentando para assumir o controle do mundo mágico. Incapaz de detê-lo sozinho, ele pede
+                              ao magizoologista Newt Scamander (Eddie Redmayne) para liderar uma intrépida equipe de
+                              bruxos, bruxas e um corajoso... </p>
+                           <ul class="carousel-destaque-info">
+                              <li><strong>Diretor:</strong> David Yates</li>
+                              <li><strong>Roteiro:</strong> Joanne Kathleen</li>
+                              <li><strong>Estreia: </strong><time datetime="2022-04-14">14/04/2022</time></li>
+                           </ul>
+                           <div class="carousel-destaque-elenco">
+                              <p class="elenco"><strong>Elenco:</strong></p>
+                              <ul class="elenco-atores">
+                                 <li>Eddie Redmayne</li>
+                                 <li>|</li>
+                                 <li>Katherine Waterson</li>
+                                 <li>|</li>
+                                 <li>Ezra Miller</li>
+                                 <li>|</li>
+                                 <li>Jude Law</li>
+                                 <li>|</li>
+                                 <li>...</li>
+                              </ul>
+                           </div>
+                           <div class="carousel-div-avaliacao">
+                              <p><strong>Avaliação:</strong></p>
+                              <ul class="star-list">
+                                 <li class="star ativo"></li>
+                                 <li class="star"></li>
+                                 <li class="star"></li>
+                                 <li class="star"></li>
+                                 <li class="star"></li>
+                              </ul>
+                           </div>
                         </div>
+                     </article>
+                  </li>
+
+                  <li class="carousel-slide">
+                     <article class="carousel-article">
+                        <div class="carousel-img">
+                           <!-- <iframe class="carousel-iframe" width="560" height="315"
+                              title="YouTube video player"
+                              frameborder="0"
+                              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allowfullscreen></iframe> -->
+                        </div>
+
+                        <div class="carousel-content">
+                           <h2 class="carousel-title"><a
+                                 href="https://www.cinemark.com.br/filme/doutor-estranho-no-multiverso-da-loucura"
+                                 rel="external" target="_blank">Doutor Estranho no Multiverso da Loucura</a></h2>
+                           <p class="sinopse"><strong><em>Sinópse:</em></strong> Em Doutor Estranho no Multiverso da
+                              Loucura, após derrotar Dormammu e enfrentar Thanos nos eventos de Vingadores: Ultimato, o
+                              Mago Supremo, Stephen Strange (Benedict Cumberbatch), e seu parceiro Wong (Benedict Wong),
+                              continuam suas pesquisas sobre... </p>
+                           <ul class="carousel-destaque-info">
+                              <li><strong>Diretor: </strong>Scott Derrickson</li>
+                              <li><strong>Roteiro: </strong> Michael Waldron e Scott Derrickson</li>
+                              <li><strong>Estreia: </strong><time datetime="2022-05-05">05/05/2022</time></li>
+                           </ul>
+                           <div class="carousel-destaque-elenco">
+                              <p class="elenco"><strong>Elenco:</strong></p>
+                              <ul class="elenco-atores">
+                                 <li>Benedict Cumberbatch</li>
+                                 <li>|</li>
+                                 <li>Elizabeth Olsen</li>
+                                 <li>|</li>
+                                 <li>Benedict Wong</li>
+                              </ul>
+                           </div>
+                           <div class="carousel-div-avaliacao">
+                              <p><strong>Avaliação:</strong></p>
+                              <ul class="star-list">
+                                 <li class="star ativo"></li>
+                                 <li class="star"></li>
+                                 <li class="star"></li>
+                                 <li class="star"></li>
+                                 <li class="star"></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </article>
+                  </li>
+
+                  <li class="carousel-slide">
+                     <article class="carousel-article">
+                        <div class="carousel-img">
+                           <!-- <iframe class="carousel-iframe" width="560" height="315"
+                              title="YouTube video player"
+                              frameborder="0"
+                              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allowfullscreen></iframe> -->
+                        </div>
+
+                        <div class="carousel-content">
+                           <h2 class="carousel-title"><a href="https://www.cinemark.com.br/filme/o-homem-do-norte"
+                                 rel="external" target="_blank">O Homem do Norte</a></h2>
+                           <p class="sinopse"><strong><em>Sinópse:</em></strong> Do aclamado diretor Robert Eggers (A
+                              Bruxa, O Farol) chega O HOMEM DO NORTE estrelando Alexander Skarsgard, Anya Taylor-Joy,
+                              Nicole Kidman, Ethan Hawke, Willem Dafoe, e Björk. O HOMEM DO NORTE é um épico thriller de
+                              vingança que explora como um príncipe Viking irá buscar justiça pelo assassinato do seu
+                              pai. </p>
+                           <ul class="carousel-destaque-info">
+                              <li><strong>Diretor:</strong> Robert Eggers</li>
+                              <li><strong>Roteiro:</strong> Robert Eggers e Sjón</li>
+                              <li><strong>Estreia: </strong><time datetime="2022-05-12">12/05/2022</time></li>
+                           </ul>
+                           <div class="carousel-destaque-elenco">
+                              <p class="elenco"><strong>Elenco:</strong></p>
+                              <ul class="elenco-atores">
+                                 <li>Alexander Skarsgård</li>
+                                 <li>|</li>
+                                 <li>Nicole Kidman</li>
+                                 <li>|</li>
+                                 <li>Willem Dafoe</li>
+                                 <li>|</li>
+                                 <li>Ethan Hawke</li>
+                                 <li>|</li>
+                                 <li>...</li>
+                              </ul>
+                           </div>
+                           <div class="carousel-div-avaliacao">
+                              <p><strong>Avaliação:</strong></p>
+                              <ul class="star-list">
+                                 <li class="star ativo"></li>
+                                 <li class="star"></li>
+                                 <li class="star"></li>
+                                 <li class="star"></li>
+                                 <li class="star"></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </article>
+                  </li>
+               </ul>
+            </div>
+
+            <button class="carousel-button carousel-button-right">
+               <i class='bx bx-chevron-right'></i>
+            </button>
+
+            <div class="carousel-nav">
+               <button class="carousel-indicator current-slide"></button>
+               <button class="carousel-indicator"></button>
+               <button class="carousel-indicator"></button>
+               <button class="carousel-indicator"></button>
+            </div>
+         </section>
+
+      </section>
+
+      <section class="container main-secundary-section">
+         <section class="section-em-destaque">
+            <div class="titulo-div-destaques">
+               <div>
+                  <h1 class="titulo-section" id="titulo-destaques">Em Destaque</h1>
+               </div>
+               <div class="form-div-select">
+                  <form class="select-form">
+                     <label for="categorias-destaque"><span class="sr-only">Selecione uma categoria:</span></label>
+                     <select name="categorias" id="categorias-destaque">
+                        <option selected><strong>Categoria: TODOS</strong></option>
+
+                        <option value="Action">Ação</option>
+
+                        <option value="Adventure" >Aventura</option>
+
+                        <option value="Animation">Animação</option>
+
+                        <option value="Comedy">Comédia</option>
+
+                        <option value="Crime">Crimes</option>
+
+                        <option value="Documentary">Documentario</option>
+
+                        <option value="Drama">Drama</option>
+
+                        <option value="Family">Família</option>
+
+                        <option value="Fantasy">Fantasia</option>
+
+                        <option value="History">História</option>
+
+                        <option value="Horror">Terror</option>
+
+                        <option value="Mystery">Mistério</option>
+
+                        <option value="Romance">Romance</option>
                         
-                        <div class="entrevista-item">
-                            <div class="entrevista-iframe">
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/16IdMStn1Ng" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
-                            <div class="entrevista-content">
-                                <h3 class="entrevista-item-title"><span class="entrevista-item-title-span">Filme: </span><a href="https://www.adorocinema.com/filmes/filme-242492/" target="_blank" rel="nofollow">Jurassic World Domínio</a></h3>
-                                <div class="entrevista-item-content">
-                                    <p><span>Diretor: </span>Colin Trevorrow</p>
-                                    <div class="entrevista-content-flex">
-                                        <p><span>Roteiro: </span>Colin Trevorrow</p>
-                                        <p><span>Estreia: </span><time datetime="2022-06-02">02/06/2022</time></p>
-                                    </div>
-                                </div>
-                            </div>
+                        <option value="Science Fiction">Ficção Científica</option>
+
+                        <option value="War">Guerra</option>
+                        
+                     </select>
+                  </form>
+                  <span class="form-select-span"></span>
+               </div>
+            </div>
+
+            <div class="posters-div-div">
+               <div class="posters-div">
+                  <div>
+                     <a href="https://www.disneyplus.com/pt-br?gclid=c0e6ff5dfc07130443929d0543d2bc14&gclsrc=3p.ds&&cid=DSS-Search-Bing-71700000075038492&s_kwcid=AL!8468!10!79233714038074!disney%20plus&msclkid=c0e6ff5dfc07130443929d0543d2bc14"
+                        target="_blank" rel="external"><img src="assets/img/posters/Filme_01.jpg"
+                           alt="O Rei do Show Bunner do Filme" class="destaques-poster-img"></a>
+                  </div>
+                  <div>
+                     <a href="https://www.netflix.com/search?q=desvent&jbv=80050008" target="_blank"><img
+                           src="assets/img/posters/Serie_01.jpg" alt="Desventuras em Série"
+                           class="destaques-poster-img"></a>
+                  </div>
+                  <div>
+                     <a href="https://www.disneyplus.com/pt-br?gclid=c0e6ff5dfc07130443929d0543d2bc14&gclsrc=3p.ds&&cid=DSS-Search-Bing-71700000075038492&s_kwcid=AL!8468!10!79233714038074!disney%20plus&msclkid=c0e6ff5dfc07130443929d0543d2bc14"
+                        target="_blank" rel="external"><img src="assets/img/posters/Filme_02.jpg"
+                           alt="Como Treinar o Seu Dragão III" class="destaques-poster-img"></a>
+                  </div>
+                  <div>
+                     <a href="https://www.netflix.com/search?q=gambito&jbv=80234304" target="_blank" rel="external"><img
+                           src="assets/img/posters/Serie_02.jpg" alt="O Gambito da Rainha"
+                           class="destaques-poster-img"></a>
+                  </div>
+                  <div>
+                     <a href="https://www.primevideo.com/?_encoding=UTF8&language=pt_BR" target="_blank"
+                        rel="external"><img src="assets/img/posters/Filme_03.jpg" alt="Um Estado de Liberdade"
+                           class="destaques-poster-img"></a>
+                  </div>
+                  <div>
+                     <a href="https://www.disneyplus.com/pt-br?gclid=c0e6ff5dfc07130443929d0543d2bc14&gclsrc=3p.ds&&cid=DSS-Search-Bing-71700000075038492&s_kwcid=AL!8468!10!79233714038074!disney%20plus&msclkid=c0e6ff5dfc07130443929d0543d2bc14"
+                        target="_blank" rel="external"><img src="assets/img/posters/Serie_03.jpg" alt="LOKI"
+                           class="destaques-poster-img"></a>
+                  </div>
+               </div>
+               <div class="flex-div-btn">
+                  <div class="div-button-carregar-mais"><button class="btn-carregar-mais" id="destaqueBtn" type="button"><span><i
+                              class='bx bx-plus'></i></span>Carregar mais</button></div>
+               </div>
+            </div>
+         </section>
+
+         <section class="section-ultimas-avaliacoes">
+            <div>
+               <h1 class="titulo-section title-ultimas-avaliacoes" id="titulo-ultimas-avaliacoes">Ultimas Avaliações
+               </h1>
+            </div>
+
+            <div class="avaliacoes-container">
+               <div class="avaliacao-div">
+                  <div class="avaliacao-pessoa-icon pessoa_01">
+
+                  </div>
+                  <div>
+                     <h3>Anne Taylor</h3>
+                     <p><strong>Avaliação: </strong> Adorei o site! Scinematic é agora minha primeira opção para buscar
+                        novos filmes ou séries para assistir. Mal posso esperar para ver Jurassic Wordl Dominio.</p>
+                     <div class="avaliacao-tempo">
+                        <div>
+                           <ul class="star-list">
+                              <li class="star"></li>
+                              <li class="star"></li>
+                              <li class="star"></li>
+                              <li class="star"></li>
+                              <li class="star ativo"></li>
+                           </ul>
                         </div>
-                    </div>
-                    <div class="flex-div-btn">
-                        <div class="div-button-carregar-mais"><button class="btn-carregar-mais"><span><i class='bx bx-plus'></i></span>Carregar mais</button></div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="main-quaternary-section">
-                <div class="container novidades-container">
-                    <div class="novidades">
-                        <div class="novidades-title-div" id="titulo-novidades">
-                            <h2>Novidades</h2>
+                        <div>
+                           <p><time datetime="2022-04-13 21:43">13/04/2022</time></p>
                         </div>
-                        <div class="container-materias">
-                            <div class="materia-item">
-                                <div class="materias-item-img">
-                                    <img src="assets/img/materia-thumbs/Juvenile-justice.jpg" alt="Imagem da Matéria">
-                                </div>
-                                <div class="materia-content">
-                                    <h3><a href="https://streamingsbrasil.com/juvenile-justice-2-temporada-na-netflix/" target="_blank" rel="nofollow">Juvenile Justice, 2 ª Temporada Na Netflix</a></h3>
-                                    <p>Podemos afirmar que existe a possibilidade da 2ª temporada de Juvenile Justice acontecer. Porém, no momento essa possibilidade ainda é de alguma forma distante. Após o lançamento na Netflix, a série recebeu uma resposta positiva...</p>
-                                    <div class="materia-tags-container">
-                                        <div class="tags-item">
-                                            <a href="#">hollywood</a>
-                                        </div>
-                                        <div class="tags-item">
-                                            <a href="#">oscar</a>
-                                        </div>
-                                        <div class="tags-item">
-                                            <a href="#">melhor filme</a>
-                                        </div>
-                                    </div>
-                                </div>  
-                            </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="avaliacao-div">
+                  <div class="avaliacao-pessoa-icon pessoa_02">
 
-                            <div class="materia-item">
-                                <div class="materias-item-img">
-                                    <img src="assets/img/materia-thumbs/Round-6.jpg" alt="Imagem da Matéria">
-                                </div>
-                                <div class="materia-content">
-                                    <h3><a href="https://istoe.com.br/tv-sul-coreana-apresenta-novidades-incluindo-a-nova-temporada-de-round-6/" target="_blank" rel="nofollow">TV sul-coreana apresenta novidades</a></h3>
-                                    <p>A Coreia do Sul não para de surpreender a indústria pop do Ocidente com seus produtos de agrado para as massas. Há o efervescente fenômeno musical do K-Pop com as “boy e girl bands”, houve o fenômeno cinematográfico Parasita, o sucesso da Netflix Round 6...</p>
-                                    <div class="materia-tags-container">
-                                        <div class="tags-item">
-                                            <a href="#">hollywood</a>
-                                        </div>
-                                        <div class="tags-item">
-                                            <a href="#">oscar</a>
-                                        </div>
-                                        <div class="tags-item">
-                                            <a href="#">melhor filme</a>
-                                        </div>
-                                    </div>
-                                </div>  
-                            </div>  
-
-                            <div class="materia-item">
-                                <div class="materias-item-img">
-                                    <img src="assets/img/materia-thumbs/tapa-na-cara.jpg" alt="Imagem da Matéria">
-                                </div>
-                                <div class="materia-content">
-                                    <h3><a href="https://www1.folha.uol.com.br/ilustrada/2022/04/tapa-de-will-smith-em-chris-rock-no-oscar-uniu-a-esquerda-e-a-direita.shtml" target="_blank" rel="nofollow">Tapa de Will Smith em Chris Rock no Oscar uniu a esquerda e a direita</a></h3>
-                                    <p>A essa altura, tod mundo já sabe que Will Smith deu um tapa na cara de Chris Rock na cerimônia do Oscar. Talvez você não queira mais ouvir falar sobre o assunto. Este texto, no entanto, não é sobre o Oscar, sobre Will Smith e Chris Rock, nem mesmo sobre Jada Pinkett Smith.</p>
-                                    <div class="materia-tags-container">
-                                        <div class="tags-item">
-                                            <a href="#">hollywood</a>
-                                        </div>
-                                        <div class="tags-item">
-                                            <a href="#">oscar</a>
-                                        </div>
-                                        <div class="tags-item">
-                                            <a href="#">melhor filme</a>
-                                        </div>
-                                    </div>
-                                </div>  
-                            </div>
+                  </div>
+                  <div>
+                     <h3>Eduardo Nobrega</h3>
+                     <p><strong>Avaliação: </strong>O Site é muito interessante! Acabei de descobrir novas séries e
+                        filmes para assistir nesse feriado. Vou aproveitar muito esse site pelos próxmios dias.</p>
+                     <div class="avaliacao-tempo">
+                        <div>
+                           <ul class="star-list">
+                              <li class="star"></li>
+                              <li class="star"></li>
+                              <li class="star"></li>
+                              <li class="star"></li>
+                              <li class="star ativo"></li>
+                           </ul>
                         </div>
-                    </div>
-                    <div class="sobre">
-                        <div class="container-sobre">
-                            <div class="sobre-item">
-                                <div class="novidades-title-div">
-                                    <h2>Sobre</h2>
-                                </div>
-                                <p>Projeto de site para um portal de filmes online, apresentado à disciplina de Desenvolvimento de Interfaces Web do curso de Ciência da Computação da Pontifícia Universidade Católica de Minas Gerais pleiteando aprovação. <br><strong>Orientador:</strong> Dr. Rommel Vieira Carneiro</p>
-                            </div>
-                            <div class="sobre-item">
-                                <div class="novidades-title-div-editorial">
-                                    <h2>Editorial</h2>
-                                </div>
-                                <div class="editorial-content">
-                                    <div class="editorial-item">
-                                        <p><span class="icon-editorial"><i class='bx bxs-user'></i></span><span>Redação: </span>FernandoCsm</p>
-                                    </div>
-                                    <div class="editorial-item">
-                                        <p><span class="icon-editorial"><i class='bx bxs-user'></i></span><span>Pesquisa: </span>FernandoCsm</p>
-                                    </div>
-                                    <div class="editorial-item">
-                                        <p><span class="icon-editorial"><i class='bx bxs-user'></i></span><span>Gerente Geral: </span>FernandoCsm</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="sobre-item">
-                                <div class="title-redes-sociais">
-                                    <h3>redes sociais: </h3>
-                                </div>
-                                <div class="redes-sociais-container">
-                                    <div class="redes-sociais-icon">
-                                        <a href="https://pt-br.facebook.com/" target="_blank" rel="nofollow"><i class='bx bxl-facebook-square'></i></a>
-                                    </div>
-                                    <div class="redes-sociais-icon">
-                                        <a href="https://twitter.com/" target="_blank" rel="nofollow"><i class='bx bxl-twitter'></i></a>
-                                    </div>
-                                    <div class="redes-sociais-icon">
-                                        <a href="https://www.instagram.com/" target="_blank" rel="nofollow"><i class='bx bxl-instagram'></i></a>
-                                    </div>
-                                </div>
-                            </div>
+                        <div>
+                           <p><time datetime="2022-04-14 15:27">14/04/2022</time></p>
                         </div>
-                    </div>
-                </div>
-            </section>
+                     </div>
+                  </div>
+               </div>
+               <div class="avaliacao-div">
+                  <div class="avaliacao-pessoa-icon pessoa_03">
 
-            <section class="lgpd-cookies">
-                <div>
-                    <p>Nosso site utiliza cookies para proporcionar aos usuários uma melhor experiência de navegação. Nosso site também utiliza cookies de terceiros como aqueles do google analytics. Ao clicar no botão "Aceitar todos" você consente com a nossa <a href="assets/pages/privacy-policy.html">Política de Privacidade</a> e com o uso de todos os cookies do nosso site. Se você não concordar com todos os cookies clique em "Configurar cookies" para concentir apenas com os cookies essenciais e aqueles de sua escolha.</p>
-                    <button class="cookie_ok" aria-expanded="true">Aceitar</button>
-                </div>
-            </section>
-        </main>
+                  </div>
+                  <div>
+                     <h3>Luiza Fernandes</h3>
+                     <p><strong>Avaliação: </strong> Adorei o gambito da rainha, a série já lançou há algum tempo, mas
+                        ainda não tinha visto. Como eu ví o poster da séria nos destaques do site eu assisti alguns
+                        episódios mais cedo.</p>
+                     <div class="avaliacao-tempo">
+                        <div>
+                           <ul class="star-list">
+                              <li class="star"></li>
+                              <li class="star"></li>
+                              <li class="star"></li>
+                              <li class="star"></li>
+                              <li class="star ativo"></li>
+                           </ul>
+                        </div>
+                        <div>
+                           <p><time datetime="2022-04-16 00:10">16/04/2022</time></p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </section>
 
-        <footer>
-            <section class="container footer-section">
-                <div class="footer-div-content">
-                    <p>&#169; Copyright 2022 | <a href="https://www.linkedin.com/in/fernandocsdm/" rel="external" target="_blank"><strong class="link-meu-nome">FernandoCsm</strong></a> <span class="lateral-bar">/</span> <span class="jealousking-link"><a href="https://jealousking.com.br/" rel="external" target="_blank">JealousKing</a></span></p>
-                    <p><a href="assets/pages/privacy-policy.html"><span class="security-policy-link">Política de Privacidade</span></a></p>
-                </div>
-                <div class="footer-div-logo">
-                    <a href="index.html"><img src="assets/img/logos/logo_size_invert.jpg" alt="Logo do Sinematic"></a>
-                </div>
-            </section>
-        </footer>
-        <script src="assets/javascript/lgpd.js"></script>
-        <script src="assets/javascript/carousel.js"></script>
-        <script src="assets/javascript/avaliacao.js"></script>
-    </body>
+      <section class="main-terciary-section">
+         <div class="container video-container">
+            <div class="entrevista-title">
+               <h1 class="titulo-section" id="titulo-entrevistas-marketing">Marketing</h1>
+            </div>
+            <div class="scroll-btn--container">
+            <div class="entrvista-info-container" id="APIResults" aria-details="scroll-v">
+               <div class="entrevista-item">
+                  <div class="entrevista-iframe">
+                     <iframe src="https://www.youtube.com/embed/j90f2NyTPho"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                  </div>
+                  <div class="entrevista-content">
+                     <h3 class="entrevista-item-title"><span class="entrevista-item-title-span">Filme: </span><a
+                           href="https://www.adorocinema.com/filmes/filme-291677/" target="_blank"
+                           rel="nofollow">Jujutsu Kaisen 0</a></h3>
+                     <div class="entrevista-item-content">
+                        <p><span>Diretor: </span>Seong-Hu Park</p>
+                        <div class="entrevista-content-flex">
+                           <p><span>Roteiro: </span>Gege Akutami e Hiroshi Seko</p>
+                           <p><span>Estreia: </span><time datetime="2022-04-28">28/04/2022</time></p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="entrevista-item">
+                  <div class="entrevista-iframe">
+                     <iframe
+                        src="https://br.vid.web.acsta.net/uk/medias/nmedia/55/21/12/13/17/19566231_hd_013.mp4"
+                        title="Adoro Cimena" frameborder="0"
+                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                  </div>
+                  <div class="entrevista-content">
+                     <h3 class="entrevista-item-title"><span class="entrevista-item-title-span">Filme: </span><a
+                           href="https://www.adorocinema.com/noticias/filmes/noticia-163105/" target="_blank"
+                           rel="nofollow">Animais Fantasticos: Os Segredos de Dubledore</a></h3>
+                     <div class="entrevista-item-content">
+                        <p><span>Diretor: </span>Colin Trevorrow</p>
+                        <div class="entrevista-content-flex">
+                           <p><span>Roteiro: </span>Joanne Kathleen</p>
+                           <p><span>Estreia: </span><time datetime="2022-04-14">14/04/2022</time></p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="entrevista-item">
+                  <div class="entrevista-iframe">
+                     <iframe
+                        src="https://br.vid.web.acsta.net/uk/medias/nmedia/55/22/02/14/18/19566488_hd_013.mp4"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                  </div>
+                  <div class="entrevista-content">
+                     <h3 class="entrevista-item-title"><span class="entrevista-item-title-span">Filme: </span><a
+                           href="https://www.adorocinema.com/noticias/filmes/noticia-163133/" target="_blank"
+                           rel="nofollow">Doutor Estranho no Multiverso da Loucura</a></h3>
+                     <div class="entrevista-item-content">
+                        <p><span>Diretor: </span>Scott Derrickson</p>
+                        <div class="entrevista-content-flex">
+                           <p><span>Roteiro: </span>Michael Waldron e Scott Derrickson</p>
+                           <p><span>Estreia: </span><time datetime="2022-05-05">05/05/2022</time></p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="entrevista-item">
+                  <div class="entrevista-iframe">
+                     <iframe src="https://www.youtube.com/embed/16IdMStn1Ng"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                  </div>
+                  <div class="entrevista-content">
+                     <h3 class="entrevista-item-title"><span class="entrevista-item-title-span">Filme: </span><a
+                           href="https://www.adorocinema.com/filmes/filme-242492/" target="_blank"
+                           rel="nofollow">Jurassic World Domínio</a></h3>
+                     <div class="entrevista-item-content">
+                        <p><span>Diretor: </span>Colin Trevorrow</p>
+                        <div class="entrevista-content-flex">
+                           <p><span>Roteiro: </span>Colin Trevorrow</p>
+                           <p><span>Estreia: </span><time datetime="2022-06-02">02/06/2022</time></p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <button type="button" class="left-arrow btn-results" id="btn-result-left"><span class="sr-only">Resultados Anteriores</span><i class='bx bx-chevron-left' ></i></button>
+            <button type="button" class="right-arrow btn-results" id="btn-result-right"><span class="sr-only">Proxímos Resultados</span><i class='bx bx-chevron-right'></i></button>
+            </div>
+         </div>
+      </section>
+
+      <section class="main-quaternary-section">
+         <div class="container novidades-container">
+            <div class="novidades">
+               <div class="novidades-title-div" id="titulo-novidades">
+                  <h2>Novidades</h2>
+               </div>
+               <div class="container-materias">
+                  <div class="materia-item">
+                     <div class="materias-item-img">
+                        <img src="assets/img/materia-thumbs/Juvenile-justice.jpg" alt="Imagem da Matéria">
+                     </div>
+                     <div class="materia-content">
+                        <h3><a href="https://streamingsbrasil.com/juvenile-justice-2-temporada-na-netflix/"
+                              target="_blank" rel="nofollow">Juvenile Justice, 2 ª Temporada Na Netflix</a></h3>
+                        <p>Podemos afirmar que existe a possibilidade da 2ª temporada de Juvenile Justice acontecer.
+                           Porém, no momento essa possibilidade ainda é de alguma forma distante. Após o lançamento na
+                           Netflix, a série recebeu uma resposta positiva...</p>
+                        <div class="materia-tags-container">
+                           <div class="tags-item">
+                              <a href="#">hollywood</a>
+                           </div>
+                           <div class="tags-item">
+                              <a href="#">oscar</a>
+                           </div>
+                           <div class="tags-item">
+                              <a href="#">melhor filme</a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="materia-item">
+                     <div class="materias-item-img">
+                        <img src="assets/img/materia-thumbs/Round-6.jpg" alt="Imagem da Matéria">
+                     </div>
+                     <div class="materia-content">
+                        <h3><a href="https://istoe.com.br/tv-sul-coreana-apresenta-novidades-incluindo-a-nova-temporada-de-round-6/"
+                              target="_blank" rel="nofollow">TV sul-coreana apresenta novidades</a></h3>
+                        <p>A Coreia do Sul não para de surpreender a indústria pop do Ocidente com seus produtos de
+                           agrado para as massas. Há o efervescente fenômeno musical do K-Pop com as “boy e girl bands”,
+                           houve o fenômeno cinematográfico Parasita, o sucesso da Netflix Round 6...</p>
+                        <div class="materia-tags-container">
+                           <div class="tags-item">
+                              <a href="#">hollywood</a>
+                           </div>
+                           <div class="tags-item">
+                              <a href="#">oscar</a>
+                           </div>
+                           <div class="tags-item">
+                              <a href="#">melhor filme</a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="materia-item">
+                     <div class="materias-item-img">
+                        <img src="assets/img/materia-thumbs/tapa-na-cara.jpg" alt="Imagem da Matéria">
+                     </div>
+                     <div class="materia-content">
+                        <h3><a href="https://www1.folha.uol.com.br/ilustrada/2022/04/tapa-de-will-smith-em-chris-rock-no-oscar-uniu-a-esquerda-e-a-direita.shtml"
+                              target="_blank" rel="nofollow">Tapa de Will Smith em Chris Rock no Oscar uniu a esquerda e
+                              a direita</a></h3>
+                        <p>A essa altura, tod mundo já sabe que Will Smith deu um tapa na cara de Chris Rock na
+                           cerimônia do Oscar. Talvez você não queira mais ouvir falar sobre o assunto. Este texto, no
+                           entanto, não é sobre o Oscar, sobre Will Smith e Chris Rock, nem mesmo sobre Jada Pinkett
+                           Smith.</p>
+                        <div class="materia-tags-container">
+                           <div class="tags-item">
+                              <a href="#">hollywood</a>
+                           </div>
+                           <div class="tags-item">
+                              <a href="#">oscar</a>
+                           </div>
+                           <div class="tags-item">
+                              <a href="#">melhor filme</a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="sobre">
+               <div class="container-sobre">
+                  <div class="sobre-item">
+                     <div class="novidades-title-div">
+                        <h2>Sobre</h2>
+                     </div>
+                     <p>Projeto de site para um portal de filmes online, apresentado à disciplina de Desenvolvimento de
+                        Interfaces Web do curso de Ciência da Computação da Pontifícia Universidade Católica de Minas
+                        Gerais pleiteando aprovação. <br><strong>Orientador:</strong> Dr. Rommel Vieira Carneiro</p>
+                  </div>
+                  <div class="sobre-item">
+                     <div class="novidades-title-div-editorial">
+                        <h2>Editorial</h2>
+                     </div>
+                     <div class="editorial-content">
+                        <div class="editorial-item">
+                           <p id="imgDev"><span class="icon-editorial"><i class='bx bxs-user'></i></span><span>Desenvolvimento:
+                              </span>FernandoCsm</p>
+                        </div>
+                        <div class="editorial-item">
+                           <p><span class="icon-editorial"><i class='bx bxs-user'></i></span><span>Redação:
+                              </span>FernandoCsm</p>
+                        </div>
+                        <div class="editorial-item">
+                           <p><span class="icon-editorial"><i class='bx bxs-user'></i></span><span>Pesquisa:
+                              </span>FernandoCsm</p>
+                        </div>
+                        <div class="editorial-item">
+                           <p><span class="icon-editorial"><i class='bx bxs-user'></i></span><span>Gerente Geral:
+                              </span>FernandoCsm</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="sobre-item">
+                     <div class="title-redes-sociais">
+                        <h3>redes sociais: </h3>
+                     </div>
+                     <div class="redes-sociais-container">
+                        <div class="redes-sociais-icon">
+                           <a href="https://pt-br.facebook.com/" target="_blank" rel="nofollow"><i
+                                 class='bx bxl-facebook-square'></i></a>
+                        </div>
+                        <div class="redes-sociais-icon">
+                           <a href="https://twitter.com/" target="_blank" rel="nofollow"><i
+                                 class='bx bxl-twitter'></i></a>
+                        </div>
+                        <div class="redes-sociais-icon">
+                           <a href="https://www.instagram.com/" target="_blank" rel="nofollow"><i
+                                 class='bx bxl-instagram'></i></a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section class="lgpd-cookies">
+         <div>
+            <p>Nosso site utiliza cookies para proporcionar aos usuários uma melhor experiência de navegação. Nosso site
+               também utiliza cookies de terceiros como aqueles do google analytics. Ao clicar no botão "Aceitar todos"
+               você consente com a nossa <a href="assets/pages/privacy-policy.html">Política de Privacidade</a> e com o
+               uso de todos os cookies do nosso site. Se você não concordar com todos os cookies clique em "Configurar
+               cookies" para concentir apenas com os cookies essenciais e aqueles de sua escolha.</p>
+            <button class="cookie_ok" aria-expanded="true">Aceitar</button>
+         </div>
+      </section>
+   </main>
+
+   <footer>
+      <section class="container footer-section">
+         <div class="footer-div-content">
+            <p>&#169; Copyright 2022 | <a href="https://www.linkedin.com/in/fernandocsdm/" rel="external"
+                  target="_blank"><strong class="link-meu-nome">FernandoCsm</strong></a> <span
+                  class="lateral-bar">/</span> <span class="jealousking-link"><a href="https://jealousking.com.br/"
+                     rel="external" target="_blank">JealousKing</a></span></p>
+            <p><a href="assets/pages/privacy-policy.html"><span class="security-policy-link">Política de
+                     Privacidade</span></a></p>
+         </div>
+         <div class="footer-div-logo">
+            <a href="index.html"><img src="assets/img/logos/logo_size_invert.jpg" alt="Logo do Sinematic"></a>
+         </div>
+      </section>
+      <section>
+         <button type="button" id="btnTop"><i class='bx bx-glasses'></i></button>
+      </section>
+   </footer>
+
+   <section class="section-top">
+      <a href="#" target="_blank" rel="nofollow"><img id="topImg" src=""></a>
+      <div class="overlayTop" aria-expanded="false"></div>
+   </section>
+
+   <!-- SCRIPTS -->
+   <script src="assets/javascript/fetchFunction.js"></script>
+   <script src="assets/javascript/generalFunctions.js"></script>
+   <!-- lgpd -->
+   <script src="assets/javascript/lgpd.js"></script>
+
+   <!-- Avaliação -->
+   <script src="assets/javascript/avaliacao.js"></script>
+   
+   <!-- tmdb -->
+   <script src="assets/javascript/TMDB/posterPop.js"></script>
+
+      <!-- Carousel tmdb -->
+   <script src="assets/javascript/TMDB/tmdbCarousel.js"></script>
+
+      <!-- Novidades -->
+   <script src="assets/javascript/TMDB/novidades.js"></script>
+
+   <!-- Carousel -->
+   <script src="assets/javascript/carousel.js"></script>
+
+   <!-- Entrevistas & Marketing -->
+   <script src="assets/javascript/mouseWheel.js"></script>
+   <script src="assets/javascript/TMDB/marketing.js"></script>
+
+   <!-- TOP -->
+   <script src="assets/javascript/img.js"></script>
+
+   <!-- SEARCH -->
+   <script src="assets/javascript/searchForm.js"></script>
+</body>
+
 </html>

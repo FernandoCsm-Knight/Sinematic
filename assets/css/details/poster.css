@@ -1,0 +1,112 @@
+/* POSTER */
+
+.poster {
+    background-color: rgba(0, 0, 0, 0.8);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    min-height: 90vh;
+}
+
+.poster-content-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 0.5rem;
+    padding: 0.5rem;
+}
+
+.poster-img--content {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(87, 40, 40, 0.25);
+    border-radius: 5px;
+}
+
+.poster-img img {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+    height: fit-content;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* TITLE */
+
+.poster-img--content h1 {
+    width: 100%;
+    padding-inline: 1rem;
+    text-align: center;
+    color: var(--vermelho-principal);
+}
+
+.poster-img--content h1:hover {
+    text-decoration: underline;
+    text-shadow: 0px 0px 2px var(--vermelho-principal-shadow-text);
+}
+
+.movie-title {
+    padding: 1rem 0;
+    line-height: 1.7em;
+    font-size: 2.3rem;
+}
+
+/* MEDIA */
+
+@media screen and (max-width: 1024px) {
+    .poster {
+        grid-row: 1;
+        grid-template-rows: auto auto;
+        min-height: auto;
+    }
+
+    .poster-content-container {
+        grid-row: 1;
+        grid-template-rows: auto auto;
+        padding-bottom: 2rem;
+    }
+
+    .poster-img {
+        grid-row: 2;
+        padding: 0 5rem 1rem 5rem;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        gap: 2rem;
+    }
+
+    .poster-img img {
+        border-radius: 5px;
+        margin: 0 auto;
+        width: fit-content;
+        max-height: 400px;
+    }
+
+    .poster-img--content {
+        display: block;
+        padding: 1rem 0;
+        background-color: transparent;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .poster-content-container {
+        display: block;
+    }
+
+    .movie-title {
+        font-size: 2rem;
+    }
+
+    .poster-img {
+        padding: 0 0.5rem 2rem 0.5rem;
+    }
+
+    .poster-img img {
+        max-width: 200px;
+    }
+}

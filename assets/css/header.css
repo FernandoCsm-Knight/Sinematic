@@ -2,7 +2,7 @@
 
 header {
     background-color: #030101;
-    box-shadow: 0px 0px 40px 12px var(--vermelho-principal-shadow);
+    box-shadow: 0px 0px 12px 0px var(--vermelho-principal-shadow);
     position: relative;
 }
 
@@ -172,17 +172,23 @@ header {
     .header-div-primary-nav {
         display: flex;
         flex-direction: column;
-        background-color: #2020204a;
+        background-color: rgba(0, 0, 0, 0.9);
         padding: 100px 20px 30px 20px;
         position: fixed;
         top: 0;
         right: 0;
         bottom: 0;
         width: 75vw;
-        backdrop-filter: blur(2rem);
+        backdrop-filter: blur(0.5rem);
         transform: translateX(100%);
         z-index: 1000;
         transition: 400ms ease-in;
+    }
+
+    @supports not (backdrop-filter: blur(0.5rem)) {
+        .header-div-primary-nav {
+            background-color: rgba(0, 0, 0, 0.95);
+        }
     }
     
     .header-form-search {
@@ -254,7 +260,7 @@ header {
     }
 
     .header-form-search input:focus {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 }
 

@@ -88,4 +88,8 @@ footer {
     h1 {
         font-size: 1.7rem;
     }
+
+    h1:first-of-type {
+        font-size: 2rem;
+    }
 }

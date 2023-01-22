@@ -14,7 +14,9 @@
         <link rel="stylesheet" href="../css/privacy-policy/main.css">
         <link rel="shortcut icon" href="../img/logos/favicon.png" type="image/x-icon">
         <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-        <script src="../javascript/index.js" defer></script>
+
+        <!-- MENU SCRIPT -->
+        <script src="../javascript/menu.js" defer></script>
     </head>
     <body>
         <header>
@@ -40,7 +42,7 @@
                     <form class="header-form-search">
                         <label for="search-bar">O que você quer buscar?</label>
                         <button class="search-btn-icon" type="submit"><i class='bx bx-search'></i><span class="sr-only">Buscar</span></button>
-                        <input id="search-bar" type="search" placeholder="Pesquisar filme...">
+                        <input id="search-bar" type="search" placeholder="Pesquisar filme..." name="search">
                     </form>
                     <button type="button" class="menu-toggle2" aria-controls="primary-navigation" aria-expanded="false"><i class='bx bx-x'></i><span class="sr-only">Menu</span></button>
                 </div>
@@ -153,7 +155,21 @@
                 </div>
             </section>
         </footer>
+
+        <!-- SCRIPTS -->
         <script src="../javascript/carousel.js"></script>
         <script src="../javascript/avaliacao.js"></script>
+        <script>
+            const form  = document.querySelector('.header-form-search');
+            const searchBtn = form.querySelector('#headerSearchBtn');
+            const searchInput = form.querySelector('#search-bar');
+            
+            form.onsubmit = (e) => {
+                e.preventDefault();
+            
+                const url = `pesquisa.html?search=${searchInput.value}`;
+                window.location.href = url;
+            }
+        </script>
     </body>
 </html>

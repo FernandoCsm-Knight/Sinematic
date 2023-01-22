@@ -1,0 +1,50 @@
+/* CONTAINER */
+
+.scroll-btn--container {
+    position: relative;
+}
+
+/* POSITIONS */
+
+.left-arrow,
+.right-arrow {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    width: 70px;
+    height: 100%;
+    opacity: 0;
+    transition: all 400ms;
+    cursor: pointer;
+}
+
+.left-arrow:hover,
+.right-arrow:hover {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.left-arrow {
+    left: 0;
+}
+
+.right-arrow {
+    right: 0;
+}
+
+/* BUTTON ICONS */
+
+.left-arrow i,
+.right-arrow i {
+    font-size: 3rem;
+    color: white;
+}
+
+/* MEDIA */
+
+@media screen and (max-width: 500px) {
+    .left-arrow,
+    .right-arrow {
+        display: none;
+    }
+}

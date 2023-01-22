@@ -1,0 +1,267 @@
+/* CONTENT */
+
+.content--section {
+    padding: 0.5rem 0.5rem 1rem 0.5rem;
+} 
+
+/* IFRAME */
+
+.movie-iframe {
+    height: 600px;
+}
+
+.movie-iframe iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+/* MOVIE INFO */
+
+.movie-gen-ad {
+    display: grid;
+    grid-template-columns:  auto auto;
+    justify-content: flex-start;
+    align-items: center;
+    margin-block: 1rem;
+    width: 100%;
+    gap: 0.5rem;
+}
+
+/* Genres */
+
+.movie-genres {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.movie-genres span {
+    display: block;
+    background-color: rgba(54, 2, 0, 0.4);
+    border: 1px solid var(--vermelho-medio);
+    padding: 0.4em 1em;
+    border-radius: 5px;
+    color: var(--vermelho-principal);
+    font-weight: 600;
+    line-height: 1.5rem;
+    height: 100%;
+}
+
+/* Information */
+
+.information-title {
+    padding: 1rem 0;
+}
+
+.information-title h2 {
+    color: var(--vermelho-principal);
+    font-size: 2rem;
+}
+
+/* Adult */
+
+.movie-adult {
+    border-radius: 5px;
+    background-color: gray;
+    position: relative;
+    padding: 0.4em 0.8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.livre {
+    background-color: rgba(0, 77, 13, 0.6);
+    transition: all 300ms;
+    border: 1px solid rgba(0, 134, 22, 0.6);
+}
+
+.livre:hover {
+    background-color: rgba(2, 36, 8, 0.6);
+}
+
+.restrito {
+    background-color: var(--vermelho-medio);
+}
+
+.movie-adult i {
+    font-size: 1.5rem;
+    color: rgb(236, 236, 236);
+}
+
+/* OVERVIEW */
+
+.overview-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}   
+
+.movie-overview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(49, 49, 49, 0.6);
+    border-radius: 0 5px 5px 0;
+    position: relative;
+    height: 100%;
+}
+
+.movie-content-container {
+    width: 100%;
+    padding: 1rem;
+}
+
+.overview-title {
+    padding-bottom: 1rem;
+    text-align: center;
+    color: var(--amarelo-contraste);
+}
+
+.overview-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px 0 0 5px;
+}
+
+.overview-img {
+    text-align: center; 
+    border-radius: 5px 0 0 5px;
+}
+
+.overview-img i {
+    color: var(--vermelho-principal);
+    text-shadow: 0px 0px 5px var(--vermelho-principal-shadow-text);
+    font-size: 5rem;
+    line-height: 2em;
+}
+
+/* Content Plus */
+
+.content-plus {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.plus-rate,
+.release-date,
+.plus-runtime,
+.plus-budget {
+    padding: 0.7rem;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.plus-rate {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.release-date,
+.plus-runtime,
+.plus-released,
+.plus-budget {
+    background-color: white;
+    color: var(--vermelho-medio);
+}
+
+.plus-released {
+    font-size: 2rem;
+    border-radius: 5px;
+    padding-inline: 0.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* MEDIA */
+
+@media screen and (max-width: 1300px) {
+    .movie-iframe {
+        height: 500px;
+    }
+
+    .overview-container {
+        margin: 0 auto;
+        max-width: 600px;
+        grid-template-columns: 1fr;
+    }
+
+    .movie-content-container {
+        position: static;
+        top: 0%;
+        left: 0%;
+        transform: translate(0%, 0%);
+    }
+
+    .movie-overview {
+        border-radius: 0 0 5px 5px;
+    }
+
+    .overview-img img {
+        border-radius: 5px 5px 0 0;
+    }
+
+    .overview-img {
+        border-radius: 5px 5px 0 0;
+    }
+}
+
+@media screen and (max-width: 768px) { 
+    .movie-gen-ad {
+        justify-content: stretch;
+        grid-template-columns: auto;
+    }
+
+    .movie-genres {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+    }
+    
+    .movie-genres span {
+        font-size: 0.8rem;
+    }
+
+    .movie-genres span:last-child {
+        margin-right: 0;
+    }
+
+    .movie-adult i {
+        font-size: 1.2rem;
+    }
+
+    .movie-iframe {
+        height: 400px;
+    }
+    
+}
+
+@media screen and (max-width: 500px) { 
+    .movie-iframe {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 400px) { 
+    .movie-gen-ad {
+        padding: 0 0.5rem;
+    }
+
+    .content--section {
+        padding: 0rem;
+    } 
+
+    .information-title {
+        padding: 0 0.5rem 0.5rem 0.5rem;
+    }
+
+    .movie-iframe {
+        height: 250px;
+    }
+}

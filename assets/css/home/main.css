@@ -4,6 +4,7 @@
 @import url(ultimas-avaliacoes.css);
 @import url(entrevistas-makingof.css);
 @import url(materias.css);
+@import url(imgTop.css);
 
 /* SEÇÃO PRINCIPAL */
 
@@ -74,6 +75,10 @@
 
 .btn-carregar-mais:active {
     background-color: var(--azul-escuro);
+}
+
+#imgDev {
+	cursor: pointer;
 }
 
 /* ANIMACAO */

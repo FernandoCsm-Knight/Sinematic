@@ -1,0 +1,24 @@
+@import url(poster.css);
+@import url(content.css);
+@import url(no-video.css);
+@import url(poster-companies.css);
+
+/* CONTAINER */
+.main-primary--section {
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+/* MEDIA */
+
+@media screen and (max-width: 1300px) {
+    .main-primary--section {
+        grid-template-columns: 60% 40%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .main-primary--section {
+        grid-template-columns: 1fr;
+    }
+}

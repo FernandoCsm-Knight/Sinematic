@@ -17,7 +17,7 @@
 .select-form > select {
     padding: 1em 4em 1em 1em;
     min-width: 300px;
-    border-radius: 5px;
+    border-radius: 3px;
     border: none;
     outline: 0;
     font-size: 1rem;
@@ -25,8 +25,8 @@
     background-color: #000000c5;
 }
 
-.select-form > select option {
-    font-size: 0.875rem;
+.select-form select option {
+    line-height: 2rem;
     color: var(--vermelho-medio);
     background-color: #000000e0;
 }
@@ -60,12 +60,15 @@
 
 .posters-div-div {
     width: 100%;
+    height: 100%;
 }
 
 .posters-div {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
+    height: 100%;
+    row-gap: 2rem;
+    column-gap: 1.5rem;
     margin-top: 2em;
     margin-bottom: 2em;
 }
@@ -80,12 +83,81 @@
     border-radius: 5px;
 }
 
-.posters-div div {
+.posters-div > div {
+    position: relative;
+    width: 100%;
+    height: 100%;
     transition: 300ms;
+    overflow: hidden;
 }
 
-.posters-div div:hover {
+.posters-div > div:hover {
     transform: scale(1.1);
+    box-shadow: 0px 5px 12px 0px rgba(0, 0, 0, 0.2);
+}
+
+.poster-rate {
+    position: absolute;
+    bottom: 2%;
+    right: 3%;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 500;
+    letter-spacing: 1px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.5em;
+    border-radius: 5px;
+    backdrop-filter: blur(0.1rem);
+    transition: all 300ms;
+}
+
+.poster-rate:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: scale(1.1);
+}
+
+.poster-genres {
+    display: block;
+    position: absolute;
+    bottom: calc(3% + 45px);
+    left: -175px;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+    border-radius: 0px 5px 5px 0;
+    border-left: 5px solid var(--vermelho-principal);
+    pointer-events: none;
+    transition: all 300ms;
+}
+
+.poster-genres:hover {
+    transform: none;
+}
+
+.posters-div > div:hover .poster-genres {
+    left: 0;
+    pointer-events: auto;
+}
+
+.poster-genres span {
+    display: block;
+    color: white;
+}
+
+.poster-date {
+    position: absolute;
+    bottom: 3%;
+    left: -135px;
+    pointer-events: none;
+    padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+    border-left: 5px solid var(--vermelho-principal);
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 0 5px 5px 0;
+    transition: all 300ms 150ms;
+}
+
+.posters-div > div:hover .poster-date {
+    left: 0;
+    pointer-events: auto;
 }
 
 /* MEDIA */
@@ -93,43 +165,68 @@
 @media screen and (max-width: 1024px) {
     .posters-div {
         grid-template-columns: 1fr 1fr 1fr;
-        gap: 2rem;
+        column-gap: 1.5rem;
+        row-gap: 2rem;
         align-items: center;
         justify-content: center;
     }
 
-    .posters-div div {
-        position: relative;
-        min-width: 200px;
-        min-height: 300px;
+    .posters-div > div {
         width: 100%;
         height: 100%;
     }
 
+    .posters-div > div:hover {
+        transform: scale(1.05);
+    }
+
     .posters-div div img {
-        position: absolute;
-        width: 200px;
-        height: 300px;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
+        width: 100%;
+        height: 100%;
     }
 
     .posters-div div:nth-child(5), .posters-div div:nth-child(6) {
         display: block;
     }
-    
+
+    .poster-genres {
+        font-size: 0.9rem;
+    }
+
+    .poster-date {
+        font-size: 0.9rem;
+    }
+
 }
 
 @media screen and (max-width: 750px) {
     .posters-div {
         grid-template-columns: 1fr 1fr;
-        gap: 1rem;
+        gap: 1.2rem;
     }
 
-    .posters-div div img, .posters-div div {
-        min-width: 225px;
-        min-height: 350px;
+    .posters-div div:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    .poster-genres {
+        top: 3%;
+        bottom: auto;
+        left: 0;
+        pointer-events: auto;
+        font-size: 0.8rem;
+        padding-left: 1rem;
+    }
+
+    .poster-genres span:nth-child(2) ~ span {
+        display: none;
+    }
+
+    .poster-date {
+        display: none;
+        left: 0;
+        pointer-events: none;
     }
 
     .posters-div div:nth-child(5), .posters-div div:nth-child(6) {
@@ -146,11 +243,11 @@
 
     .select-form > select {
         min-width: 80vw;
-        font-size: 0.875rem;
+        font-size: 1rem;
     }
 
     .select-form > select option {
-        font-size: 0.750rem;
+        font-size: 1rem;
     }
 }
 
@@ -160,8 +257,8 @@
         gap: 1rem;
     }
 
-    .posters-div div {
-        position: static;
+    .posters-div > div {
+        position: relative;
         min-width: auto;
         min-height: auto;
         width: auto;
@@ -172,12 +269,9 @@
         position: initial;
         width: 100%;
         height: 100%;
-        left: 0;
-        top: 0;
-        transform: translate(0%,0%);
     }
 
-    .posters-div div:nth-child(4) {
+    .posters-div > div:nth-child(4) {
         display: none;
     }
 }
